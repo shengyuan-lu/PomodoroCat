@@ -1,19 +1,25 @@
-//
-//  ContentView.swift
-//  TomatoCat
-//
-//  Created by Shengyuan Lu on 2/26/21.
-//
-
 import SwiftUI
 
 struct MainView: View {
+    
+    // MARK: - Variable
+    
+    // MARK: - View
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            ScrollView {
+                Text("Hello, world!")
+                    .padding()
+            }
+            .navigationBarTitle(Text("TomatoCat"))
+            .navigationBarTitleDisplayMode(.inline)
+        }
+
     }
 }
 
+// MARK: - Preview
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

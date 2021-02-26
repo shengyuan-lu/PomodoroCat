@@ -13,6 +13,8 @@
 		F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */; };
 		F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */; };
 		F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC9F25E9AE660026EB32 /* TimerView.swift */; };
+		F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */; };
+		F4E1CCA625E9B77D0026EB32 /* TaskStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F4E1CC8A25E9AB560026EB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F4E1CC9F25E9AE660026EB32 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		F4E1CC9325E9AB840026EB32 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		F4E1CC9625E9ABA80026EB32 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			files = (
 				F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */,
 				F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */,
+				F4E1CCA625E9B77D0026EB32 /* TaskStruct.swift in Sources */,
+				F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
