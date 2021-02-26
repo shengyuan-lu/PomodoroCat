@@ -12,6 +12,7 @@
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
 		F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */; };
 		F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */; };
+		F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC9F25E9AE660026EB32 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4E1CC8A25E9AB560026EB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F4E1CC9F25E9AE660026EB32 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CC8325E9AB540026EB32 /* MainView.swift */,
+				F4E1CC9F25E9AE660026EB32 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */,
 				F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */,
 			);
