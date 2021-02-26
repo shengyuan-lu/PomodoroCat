@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */; };
-		F4E1CC8425E9AB540026EB32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* ContentView.swift */; };
+		F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* MainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
 		F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */; };
+		F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4E1CC7E25E9AB540026EB32 /* TomatoCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoCatApp.swift; sourceTree = "<group>"; };
-		F4E1CC8325E9AB540026EB32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4E1CC8325E9AB540026EB32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4E1CC8525E9AB560026EB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4E1CC8A25E9AB560026EB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,12 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */,
-				F4E1CC8325E9AB540026EB32 /* ContentView.swift */,
+				F4E1CC9125E9AB640026EB32 /* Views */,
+				F4E1CC9425E9AB9A0026EB32 /* Model */,
+				F4E1CC9325E9AB840026EB32 /* Data */,
+				F4E1CC9525E9ABA00026EB32 /* Extension */,
+				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
+				F4E1CC9625E9ABA80026EB32 /* Other */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
 				F4E1CC8A25E9AB560026EB32 /* Info.plist */,
 				F4E1CC8725E9AB560026EB32 /* Preview Content */,
@@ -67,6 +74,50 @@
 				F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4E1CC9125E9AB640026EB32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4E1CC8325E9AB540026EB32 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4E1CC9325E9AB840026EB32 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F4E1CC9425E9AB9A0026EB32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4E1CC9525E9ABA00026EB32 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4E1CC9625E9ABA80026EB32 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */,
+			);
+			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */,
 				F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4E1CC8425E9AB540026EB32 /* ContentView.swift in Sources */,
+				F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengyuanlu.TomatoCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengyuanlu.TomatoCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
