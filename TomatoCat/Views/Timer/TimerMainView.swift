@@ -5,13 +5,18 @@ struct TimerMainView: View {
     // MARK: - Variable
     @State private var timerStart:Bool = false
     
+    @StateObject var taskManager = TaskManager()
+    
     // MARK: - View
     var body: some View {
         
         NavigationView {
             ScrollView {
-                TimerView(timerStart: $timerStart)
-                    .padding(100)
+                
+                Divider()
+                    .padding()
+                
+                TimerView(timerStart: $timerStart, taskManager: taskManager)
                 
                 Button(action: {
                     timerStart.toggle()

@@ -4,11 +4,10 @@ struct TimerView: View {
     
     // MARK: - Variable
     @Binding var timerStart: Bool
-    @State private var isWorking: Bool = true
     
-    @State private var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    @StateObject private var taskManager = TaskManager()
+    @ObservedObject var taskManager:TaskManager
     
     // MARK: - View
     var body: some View {
@@ -48,7 +47,7 @@ struct TimerView: View {
                         .fontWeight(.bold)
                         .font(.system(size: 45))
                     
-                    Text(isWorking ? "Working" : "Relaxing")
+                    Text(taskManager.isWorking ? "Working" : "Relaxing")
                         .fontWeight(.light)
                         .font(.system(size: 30))
                     
@@ -62,20 +61,28 @@ struct TimerView: View {
             
         }
         .onReceive(self.timer, perform: { _ in
-            timerTick()
             
+            if timerStart {
+                
+                withAnimation {
+                    taskManager.timerFirePerSecond()
+                }
+                
+            }
+            
+        })
+        .onChange(of: self.timerStart, perform: { _ in
+            if self.timerStart == false {
+                withAnimation {
+                    taskManager.resetTask()
+                }
+            }
         })
         
     } // End of body
     
+    
     // MARK: - Function
-    func timerTick() {
-        
-        if timerStart {
-            
-        }
-        
-    }
     
 }
 
@@ -83,6 +90,6 @@ struct TimerView: View {
 // MARK: - Preview
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timerStart: Binding.constant(false))
+        TimerView(timerStart: Binding.constant(false), taskManager: TaskManager())
     }
 }
