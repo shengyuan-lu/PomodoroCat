@@ -73,7 +73,7 @@ struct SettingsView: View {
                 
                 // Link Section
                 Section(header: Text("Links")) {
-                    SettingsRowTypeLink(iconName: "globe", iconColor: Color.orange, text: "Developer Website", link: "https://www.google.com")
+                    SettingsRowTypeLink(iconName: "globe", iconColor: Color.purple, text: "Developer Website", link: "https://www.google.com")
                     SettingsRowTypeLink(iconName: "hand.raised.fill", iconColor: Color.gray, text: "Privacy Policy", link: "https://www.google.com")
                 }
                 .padding(.vertical, 3)
