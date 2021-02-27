@@ -8,24 +8,12 @@ struct TimerMainView: View {
     // MARK: - View
     var body: some View {
         
-        NavigationView {
-        ScrollView{
-            
+        ScrollView {
             TimerTitleView(taskManager: taskManager)
                 .padding()
             
-            VStack {
-                TimerView(taskManager: taskManager)
-                    .padding(40)
-                
-                ButtonSetView(taskManager: taskManager)
-            }
-            
-            
-        }
-        .navigationTitle(Text("PomodoroCat"))
-        .navigationBarTitleDisplayMode(.large)
-            
+            TimerView(taskManager: taskManager)
+                .padding(40)
         }
         
         

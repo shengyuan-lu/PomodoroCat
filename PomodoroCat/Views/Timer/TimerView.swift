@@ -12,7 +12,25 @@ struct TimerView: View {
         
         VStack {
             ZStack {
+                
+                VStack(spacing: 10) {
+                    
+                    Text("\(taskManager.getCurrentNumMin()) min")
+                        .fontWeight(.bold)
+                        .font(.system(size: 45))
+                    
+                    Text(taskManager.isWorking ? "Working" : "Relaxing")
+                        .fontWeight(.light)
+                        .font(.system(size: 30))
+                    
+                }
+                .frame(width: screenWidth/2.6, height: screenWidth/2.6, alignment: .center)
+                .scaledToFill()
+                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+                
                 ZStack {
+                    
                     Circle() // BG Gray Circle
                         .trim(from: 0, to: 1)
                         .stroke(Color.gray.opacity(0.3), style: StrokeStyle(lineWidth: screenWidth/10, lineCap: .round))
@@ -35,24 +53,16 @@ struct TimerView: View {
                             axis: (x: 0, y: 1, z: 0)
                         )
                     
+                    Button(action: {
+                        taskManager.timerStart.toggle()
+                    }, label: {
+                        Circle() // BG Gray Circle
+                            .trim(from: 0, to: 1)
+                            .foregroundColor(Color.clear)
+                    })
+                    
                 }
                 .frame(width: screenWidth/1.5, height: screenWidth/1.5, alignment: .center)
-                
-                VStack(spacing: 10) {
-                    
-                    Text("\(taskManager.getCurrentNumMin()) min")
-                        .fontWeight(.bold)
-                        .font(.system(size: 45))
-                    
-                    Text(taskManager.isWorking ? "Working" : "Relaxing")
-                        .fontWeight(.light)
-                        .font(.system(size: 30))
-                    
-                }
-                .frame(width: screenWidth/2.6, height: screenWidth/2.6, alignment: .center)
-                .scaledToFill()
-                .multilineTextAlignment(.leading)
-                .lineLimit(1)
                 
             }
             
