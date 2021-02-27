@@ -10,6 +10,9 @@ import SwiftUI
 struct MainView: View {
     
     // MARK: - Variable
+    @State private var showCartModal = false
+    
+    @AppStorage("themeIndex") private var themeIndex = 1
     
     // MARK: - View
     
@@ -20,6 +23,7 @@ struct MainView: View {
     
 }
 
+// MARK: - Preview
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
