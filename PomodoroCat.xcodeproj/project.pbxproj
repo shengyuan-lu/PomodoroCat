@@ -68,7 +68,7 @@
 		F4E1CC7525E9AB540026EB32 = {
 			isa = PBXGroup;
 			children = (
-				F4E1CC8025E9AB540026EB32 /* TomatoCat */,
+				F4E1CC8025E9AB540026EB32 /* PomodoroCat */,
 				F4E1CC7F25E9AB540026EB32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4E1CC8025E9AB540026EB32 /* TomatoCat */ = {
+		F4E1CC8025E9AB540026EB32 /* PomodoroCat */ = {
 			isa = PBXGroup;
 			children = (
 				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
@@ -96,7 +96,7 @@
 				F4E1CC8A25E9AB560026EB32 /* Info.plist */,
 				F4E1CC8725E9AB560026EB32 /* Preview Content */,
 			);
-			path = TomatoCat;
+			path = PomodoroCat;
 			sourceTree = "<group>";
 		};
 		F4E1CC8725E9AB560026EB32 /* Preview Content */ = {
