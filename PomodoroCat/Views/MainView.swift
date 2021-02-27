@@ -12,25 +12,10 @@ struct MainView: View {
     // MARK: - Variable
     
     // MARK: - View
+    
+    
     var body: some View {
-        
-        
-        TabView {
-            TimerMainView()
-                .tabItem {
-                    Label("Pomodoro", systemImage: "timer")
-                }
-                .tag(1)
-            
-            
-            CatMainView()
-                .tabItem {
-                    Label("Cat", systemImage: "hare.fill")
-                }
-                .tag(2)
-            
-        }
-        
+        LoginMainView()
     }
     
 }
