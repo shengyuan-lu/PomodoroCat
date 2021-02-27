@@ -66,6 +66,7 @@ struct SettingsView: View {
                 Section(header: Text("About")) {
                     SettingsRowTypeAbout(iconName: "apps.iphone", iconColor: Color.blue, firstText: "Application", secondText: "PomodoroCat")
                     SettingsRowTypeAbout(iconName: "checkmark.circle.fill", iconColor: Color.green, firstText: "Compatibility", secondText: "iPhone")
+                    SettingsRowTypeAbout(iconName: "swift", iconColor: Color.orange, firstText: "Programming Language", secondText: "Swift")
                     SettingsRowTypeAbout(iconName: "flag", iconColor: Color.red, firstText: "App Version", secondText: "\(AppVersion.version!)")
                 }
                 .padding(.vertical, 3)

@@ -22,7 +22,7 @@ struct Genius:Hashable {
 
 let geniusArray = [
     Genius(name: "Shengyuan Lu", imageName: "shengyuan", role: "Frontend Engineer", bio: "Computer Science 2024\nUniversity of California, Irinve"),
-    Genius(name: "Yinghao Liu", imageName: "yinghao", role: "Backend Engineer", bio: "Computer Science Enginnering 2024\nUniversity of California, Irinve"),
+    Genius(name: "Yinghao Liu", imageName: "yinghao", role: "Backend Engineer", bio: "C.S. Enginnering 2024\nUniversity of California, Irinve"),
     Genius(name: "Jingqi Yao", imageName: "jingqi", role: "Backend Engineer", bio: "Computer Science 2023\nUniversity of California, Irinve"),
-    Genius(name: "Qingshuang Su", imageName: "qingshuang", role: "Backend Engineer", bio: "Computer Science Enginnering 2024\nUniversity of California, Irinve")
+    Genius(name: "Qingshuang Su", imageName: "qingshuang", role: "Backend Engineer", bio: "C.S. Enginnering 2024\nUniversity of California, Irinve")
 ]
