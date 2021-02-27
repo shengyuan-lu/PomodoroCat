@@ -3,15 +3,12 @@ import SwiftUI
 struct TimerView: View {
     
     // MARK: - Variable
-    @Binding var timerStart: Bool
-    
     @State private var timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     @ObservedObject var taskManager:TaskManager
     
     // MARK: - View
     var body: some View {
-        
         
         VStack {
             ZStack {
@@ -62,7 +59,7 @@ struct TimerView: View {
         }
         .onReceive(self.timer, perform: { _ in
             
-            if timerStart {
+            if self.taskManager.timerStart {
                 
                 withAnimation {
                     taskManager.timerFirePerSecond()
@@ -71,8 +68,8 @@ struct TimerView: View {
             }
             
         })
-        .onChange(of: self.timerStart, perform: { _ in
-            if self.timerStart == false {
+        .onChange(of: self.taskManager.timerStart, perform: { _ in
+            if self.taskManager.timerStart == false {
                 withAnimation {
                     taskManager.resetTask()
                 }
@@ -90,6 +87,6 @@ struct TimerView: View {
 // MARK: - Preview
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timerStart: Binding.constant(false), taskManager: TaskManager())
+        TimerView(taskManager: TaskManager())
     }
 }

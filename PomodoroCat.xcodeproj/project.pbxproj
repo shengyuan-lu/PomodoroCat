@@ -11,6 +11,7 @@
 		F43E830525EA1CF400885499 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830225EA1CF400885499 /* done.wav */; };
 		F43E830625EA1CF400885499 /* clickback.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830325EA1CF400885499 /* clickback.wav */; };
 		F43E830725EA1CF400885499 /* clickto.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830425EA1CF400885499 /* clickto.wav */; };
+		F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */; };
 		F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */; };
 		F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		F43E830225EA1CF400885499 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
 		F43E830325EA1CF400885499 /* clickback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickback.wav; sourceTree = "<group>"; };
 		F43E830425EA1CF400885499 /* clickto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickto.wav; sourceTree = "<group>"; };
+		F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioURL.swift; sourceTree = "<group>"; };
 		F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCat.swift; sourceTree = "<group>"; };
 		F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMainView.swift; sourceTree = "<group>"; };
@@ -88,10 +90,10 @@
 				F4E1CC9125E9AB640026EB32 /* Views */,
 				F4E1CC9425E9AB9A0026EB32 /* View Model */,
 				F4E1CC9325E9AB840026EB32 /* Model */,
+				F4E1CC9625E9ABA80026EB32 /* Extra */,
 				F4E1CC9525E9ABA00026EB32 /* Extension */,
 				F43E830125EA1CD100885499 /* Sound */,
 				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
-				F4E1CC9625E9ABA80026EB32 /* Other */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
 				F4E1CC8A25E9AB560026EB32 /* Info.plist */,
 				F4E1CC8725E9AB560026EB32 /* Preview Content */,
@@ -141,12 +143,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		F4E1CC9625E9ABA80026EB32 /* Other */ = {
+		F4E1CC9625E9ABA80026EB32 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */,
 				F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */,
 			);
-			path = Other;
+			path = Extra;
 			sourceTree = "<group>";
 		};
 		F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */ = {
@@ -253,6 +256,7 @@
 				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
+				F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */,
 				F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */,
 				F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */,
