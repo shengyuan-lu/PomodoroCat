@@ -10,19 +10,23 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         
-        TabView {
-            TimerMainView()
-                .tabItem {
-                    Label("Pomodoro", systemImage: "timer")
-                }
-                .tag(1)
-            
-            CatMainView()
-                .tabItem {
-                    Label("Cat", systemImage: "hare.fill")
-                }
-                .tag(2)
-            
+        NavigationView {
+            TabView {
+                TimerMainView()
+                    .tabItem {
+                        Label("Pomodoro", systemImage: "timer")
+                    }
+                    .tag(1)
+                
+                CatMainView()
+                    .tabItem {
+                        Label("Cat", systemImage: "hare.fill")
+                    }
+                    .tag(2)
+                
+            }
+            .navigationBarTitle(Text("PomodoroCat"))
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }

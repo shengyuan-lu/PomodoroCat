@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43E82FF25EA1C9400885499 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E82FE25EA1C9400885499 /* AudioPlayer.swift */; };
+		F43E830525EA1CF400885499 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830225EA1CF400885499 /* done.wav */; };
+		F43E830625EA1CF400885499 /* clickback.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830325EA1CF400885499 /* clickback.wav */; };
+		F43E830725EA1CF400885499 /* clickto.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830425EA1CF400885499 /* clickto.wav */; };
 		F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */; };
 		F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
@@ -21,7 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F4E1CC7E25E9AB540026EB32 /* TomatoCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43E82FE25EA1C9400885499 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		F43E830225EA1CF400885499 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
+		F43E830325EA1CF400885499 /* clickback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickback.wav; sourceTree = "<group>"; };
+		F43E830425EA1CF400885499 /* clickto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickto.wav; sourceTree = "<group>"; };
+		F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCat.swift; sourceTree = "<group>"; };
 		F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMainView.swift; sourceTree = "<group>"; };
 		F4E1CC8525E9AB560026EB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43E830125EA1CD100885499 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				F43E830325EA1CF400885499 /* clickback.wav */,
+				F43E830425EA1CF400885499 /* clickto.wav */,
+				F43E830225EA1CF400885499 /* done.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		F4E1CC7525E9AB540026EB32 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +76,7 @@
 		F4E1CC7F25E9AB540026EB32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4E1CC7E25E9AB540026EB32 /* TomatoCat.app */,
+				F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +86,10 @@
 			children = (
 				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
 				F4E1CC9125E9AB640026EB32 /* Views */,
-				F4E1CC9425E9AB9A0026EB32 /* Model */,
-				F4E1CC9325E9AB840026EB32 /* Data */,
+				F4E1CC9425E9AB9A0026EB32 /* View Model */,
+				F4E1CC9325E9AB840026EB32 /* Model */,
 				F4E1CC9525E9ABA00026EB32 /* Extension */,
+				F43E830125EA1CD100885499 /* Sound */,
 				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
 				F4E1CC9625E9ABA80026EB32 /* Other */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
@@ -98,20 +117,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F4E1CC9325E9AB840026EB32 /* Data */ = {
+		F4E1CC9325E9AB840026EB32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F4E1CCA525E9B77D0026EB32 /* Task.swift */,
+				F43E82FE25EA1C9400885499 /* AudioPlayer.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F4E1CC9425E9AB9A0026EB32 /* Model */ = {
+		F4E1CC9425E9AB9A0026EB32 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
 				F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */,
 			);
-			path = Model;
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		F4E1CC9525E9ABA00026EB32 /* Extension */ = {
@@ -157,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4E1CC7D25E9AB540026EB32 /* TomatoCat */ = {
+		F4E1CC7D25E9AB540026EB32 /* PomodoroCat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4E1CC8D25E9AB560026EB32 /* Build configuration list for PBXNativeTarget "TomatoCat" */;
+			buildConfigurationList = F4E1CC8D25E9AB560026EB32 /* Build configuration list for PBXNativeTarget "PomodoroCat" */;
 			buildPhases = (
 				F4E1CC7A25E9AB540026EB32 /* Sources */,
 				F4E1CC7B25E9AB540026EB32 /* Frameworks */,
@@ -169,9 +189,9 @@
 			);
 			dependencies = (
 			);
-			name = TomatoCat;
+			name = PomodoroCat;
 			productName = TomatoCat;
-			productReference = F4E1CC7E25E9AB540026EB32 /* TomatoCat.app */;
+			productReference = F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4E1CC7925E9AB540026EB32 /* Build configuration list for PBXProject "TomatoCat" */;
+			buildConfigurationList = F4E1CC7925E9AB540026EB32 /* Build configuration list for PBXProject "PomodoroCat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,7 +221,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4E1CC7D25E9AB540026EB32 /* TomatoCat */,
+				F4E1CC7D25E9AB540026EB32 /* PomodoroCat */,
 			);
 		};
 /* End PBXProject section */
@@ -211,8 +231,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43E830625EA1CF400885499 /* clickback.wav in Resources */,
 				F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */,
+				F43E830725EA1CF400885499 /* clickto.wav in Resources */,
 				F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */,
+				F43E830525EA1CF400885499 /* done.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +249,7 @@
 			files = (
 				F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */,
 				F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */,
+				F43E82FF25EA1C9400885499 /* AudioPlayer.swift in Sources */,
 				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
@@ -401,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4E1CC7925E9AB540026EB32 /* Build configuration list for PBXProject "TomatoCat" */ = {
+		F4E1CC7925E9AB540026EB32 /* Build configuration list for PBXProject "PomodoroCat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4E1CC8B25E9AB560026EB32 /* Debug */,
@@ -410,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4E1CC8D25E9AB560026EB32 /* Build configuration list for PBXNativeTarget "TomatoCat" */ = {
+		F4E1CC8D25E9AB560026EB32 /* Build configuration list for PBXNativeTarget "PomodoroCat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4E1CC8E25E9AB560026EB32 /* Debug */,

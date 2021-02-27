@@ -10,24 +10,18 @@ struct TimerMainView: View {
     // MARK: - View
     var body: some View {
         
-        NavigationView {
-            ScrollView {
-                
-                Divider()
-                    .padding()
-                
-                TimerView(timerStart: $timerStart, taskManager: taskManager)
-                
-                Button(action: {
-                    timerStart.toggle()
-                }, label: {
-                    Text(timerStart ? "Stop" : "Start")
-                })
-            }
-            .navigationBarTitle(Text("PomodoroCat"))
-            .navigationBarTitleDisplayMode(.inline)
+        ScrollView {
+            
+            TimerView(timerStart: $timerStart, taskManager: taskManager)
+                .padding(40)
+            
+            Button(action: {
+                timerStart.toggle()
+            }, label: {
+                Text(timerStart ? "Stop" : "Start")
+            })
         }
-
+        
     }
 }
 
