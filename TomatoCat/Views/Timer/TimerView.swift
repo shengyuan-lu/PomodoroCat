@@ -3,12 +3,12 @@ import SwiftUI
 struct TimerView: View {
     
     // MARK: - Variable
-    @State var timerStart:Bool = true
-    @State var isWorking: Bool = true
+    @Binding var timerStart: Bool
+    @State private var isWorking: Bool = true
     
     @State private var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
-    @State private var task = Task(pomodoroSeconds: 25*60, relaxSeconds: 5*60, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
+    @StateObject private var taskManager = TaskManager()
     
     // MARK: - View
     var body: some View {
@@ -22,18 +22,18 @@ struct TimerView: View {
                         .stroke(Color.gray.opacity(0.3), style: StrokeStyle(lineWidth: screenWidth/10, lineCap: .round))
                     
                     Circle() // Relax Circle
-                        .trim(from: 0, to: task.relaxTo)
+                        .trim(from: 0, to: taskManager.task.relaxTo)
                         .stroke(Color.green, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
-                        .rotationEffect(.init(degrees: task.relaxDegreeWithPomodoro))
+                        .rotationEffect(.init(degrees: taskManager.task.relaxDegreeWithPomodoro))
                     
                     Circle() // Pomodoro Circle
-                        .trim(from: 0, to: task.pomodoroTo)
+                        .trim(from: 0, to: taskManager.task.pomodoroTo)
                         .stroke(Color.pink, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
                         .rotation3DEffect(
                             .degrees(180),
                             axis: (x: 1, y: 1, z: 0)
                         )
-                        .rotationEffect(.degrees(task.pomodoroDegree), anchor: .center)
+                        .rotationEffect(.degrees(taskManager.task.pomodoroDegree), anchor: .center)
                         .rotation3DEffect(
                             .degrees(180),
                             axis: (x: 0, y: 1, z: 0)
@@ -44,9 +44,9 @@ struct TimerView: View {
                 
                 VStack(spacing: 10) {
                     
-                    Text("\(isWorking ? Int(ceil(task.pomodoroCentiSeconds / 100 / 60)) : Int(ceil(task.relaxCentiSeconds / 100 / 60))) min")
+                    Text("min")
                         .fontWeight(.bold)
-                        .font(.system(size: 40))
+                        .font(.system(size: 45))
                     
                     Text(isWorking ? "Working" : "Relaxing")
                         .fontWeight(.light)
@@ -71,6 +71,10 @@ struct TimerView: View {
     // MARK: - Function
     func timerTick() {
         
+        if timerStart {
+            
+        }
+        
     }
     
 }
@@ -79,6 +83,6 @@ struct TimerView: View {
 // MARK: - Preview
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(timerStart: Binding.constant(false))
     }
 }

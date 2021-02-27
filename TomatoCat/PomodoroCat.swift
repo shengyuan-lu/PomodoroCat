@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TomatoCatApp: App {
+struct PomodoroCat: App {
     var body: some Scene {
         WindowGroup {
             MainView()

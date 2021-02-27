@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */; };
-		F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* MainView.swift */; };
+		F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */; };
+		F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
 		F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */; };
 		F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */; };
 		F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC9F25E9AE660026EB32 /* TimerView.swift */; };
 		F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */; };
-		F4E1CCA625E9B77D0026EB32 /* TaskStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */; };
+		F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCA525E9B77D0026EB32 /* Task.swift */; };
+		F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */; };
+		F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */; };
+		F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4E1CC7E25E9AB540026EB32 /* TomatoCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoCatApp.swift; sourceTree = "<group>"; };
-		F4E1CC8325E9AB540026EB32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCat.swift; sourceTree = "<group>"; };
+		F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMainView.swift; sourceTree = "<group>"; };
 		F4E1CC8525E9AB560026EB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4E1CC8825E9AB560026EB32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4E1CC8A25E9AB560026EB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F4E1CC9F25E9AE660026EB32 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
-		F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStruct.swift; sourceTree = "<group>"; };
+		F4E1CCA525E9B77D0026EB32 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,7 @@
 		F4E1CC8025E9AB540026EB32 /* TomatoCat */ = {
 			isa = PBXGroup;
 			children = (
-				F4E1CC8125E9AB540026EB32 /* TomatoCatApp.swift */,
+				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
 				F4E1CC9125E9AB640026EB32 /* Views */,
 				F4E1CC9425E9AB9A0026EB32 /* Model */,
 				F4E1CC9325E9AB840026EB32 /* Data */,
@@ -85,8 +91,9 @@
 		F4E1CC9125E9AB640026EB32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F4E1CC8325E9AB540026EB32 /* MainView.swift */,
-				F4E1CC9F25E9AE660026EB32 /* TimerView.swift */,
+				F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */,
+				F4E1CCB825E9EC210026EB32 /* Timer */,
+				F4E1CCB925E9EC290026EB32 /* Cat */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,7 +101,7 @@
 		F4E1CC9325E9AB840026EB32 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F4E1CCA525E9B77D0026EB32 /* TaskStruct.swift */,
+				F4E1CCA525E9B77D0026EB32 /* Task.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		F4E1CC9425E9AB9A0026EB32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +135,23 @@
 				F4E1CC9925E9ABD90026EB32 /* Launch Screen.storyboard */,
 			);
 			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		F4E1CCB825E9EC210026EB32 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */,
+				F4E1CC9F25E9AE660026EB32 /* TimerView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		F4E1CCB925E9EC290026EB32 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */,
+			);
+			path = Cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +225,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */,
-				F4E1CC8425E9AB540026EB32 /* MainView.swift in Sources */,
-				F4E1CCA625E9B77D0026EB32 /* TaskStruct.swift in Sources */,
+				F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */,
+				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
+				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
+				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
+				F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */,
 				F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */,
-				F4E1CC8225E9AB540026EB32 /* TomatoCatApp.swift in Sources */,
+				F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
