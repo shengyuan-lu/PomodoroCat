@@ -11,6 +11,8 @@ class TaskManager: ObservableObject {
     
     @Published var completedNum = 0
     
+    @Published var pomodoroDonePlayed = false
+    
     var audioPlayer = AudioPlayer()
     
     func timerFirePerSecond() {
@@ -30,12 +32,22 @@ class TaskManager: ObservableObject {
             
         } else if task.relaxSeconds == 0 {
             self.resetTask()
+            
+            self.completedNum += 1
         }
         
         checkIfPlayAudio()
+
     }
     
     func checkIfPlayAudio() {
+        if task.pomodoroTo == 0 && !pomodoroDonePlayed {
+            self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+            
+            pomodoroDonePlayed = true
+        }
+        
+        
         if task.pomodoroTo == 0 && task.relaxTo == 0 {
             
             self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)

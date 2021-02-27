@@ -18,19 +18,18 @@ struct TimerTitleView: View {
             
             VStack(alignment: .leading) {
                 
-                Text("Your Progress")
+                Text("Your Progress (\(taskManager.completedNum)/4)")
                     .font(.body)
                     .fontWeight(.regular)
                     .foregroundColor(Color.primary)
                 
                 HStack {
                     
-                   Capsule()
-                    
                 }
-                .frame(height: 10, alignment: .leading)
-                .foregroundColor(Color.green)
+                
             }
+            .frame(height: 10, alignment: .leading)
+            
             
         })
         

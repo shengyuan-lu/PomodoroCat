@@ -10,26 +10,35 @@ import SwiftUI
 struct MainView: View {
     
     // MARK: - Variable
+    @State private var showCatModal = false
     
     // MARK: - View
     var body: some View {
         
-        
-        TabView {
+        NavigationView {
             TimerMainView()
-                .tabItem {
-                    Label("Pomodoro", systemImage: "timer")
-                }
-                .tag(1)
-            
-            
-            CatMainView()
-                .tabItem {
-                    Label("Cat", systemImage: "hare.fill")
-                }
-                .tag(2)
-            
+                .navigationBarTitle(Text("PomodoroCat"))
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    leading:
+                        NavigationLink(
+                            destination: SettingsView(),
+                            label: {
+                                Image(systemName: "gearshape.fill")
+                                    .font(.title2)
+                            }),
+                    
+                    trailing:
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "cart.fill")
+                                .font(.title2)
+                        }).sheet(isPresented: self.$showCatModal, content: {
+                            
+                        }))
         }
+        
         
     }
     

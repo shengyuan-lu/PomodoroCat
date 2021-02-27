@@ -16,6 +16,15 @@
 		F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */; };
 		F467CB2B25EA3C0A00DD7B55 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */; };
 		F467CB2E25EA3F3900DD7B55 /* TimerTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2D25EA3F3900DD7B55 /* TimerTitleView.swift */; };
+		F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3325EABED600DD7B55 /* SettingsView.swift */; };
+		F467CB3825EAC09600DD7B55 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3725EAC09600DD7B55 /* SettingsIcon.swift */; };
+		F467CB3B25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3A25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift */; };
+		F467CB3E25EAC17500DD7B55 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3D25EAC17500DD7B55 /* AppVersion.swift */; };
+		F467CB4225EAC2B100DD7B55 /* SettingsRowTypeLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4125EAC2B100DD7B55 /* SettingsRowTypeLink.swift */; };
+		F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4525EAC30C00DD7B55 /* Helper.swift */; };
+		F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4825EAC5B500DD7B55 /* ProfileView.swift */; };
+		F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4C25EAC5F600DD7B55 /* Genius.swift */; };
+		F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB5225EACDE700DD7B55 /* GeniusView.swift */; };
 		F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */; };
 		F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
@@ -39,6 +48,16 @@
 		F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F467CB2D25EA3F3900DD7B55 /* TimerTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTitleView.swift; sourceTree = "<group>"; };
+		F467CB3325EABED600DD7B55 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F467CB3725EAC09600DD7B55 /* SettingsIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
+		F467CB3A25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowTypeAbout.swift; sourceTree = "<group>"; };
+		F467CB3D25EAC17500DD7B55 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		F467CB4125EAC2B100DD7B55 /* SettingsRowTypeLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowTypeLink.swift; sourceTree = "<group>"; };
+		F467CB4525EAC30C00DD7B55 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F467CB4825EAC5B500DD7B55 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F467CB4C25EAC5F600DD7B55 /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
+		F467CB5225EACDE700DD7B55 /* GeniusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusView.swift; sourceTree = "<group>"; };
+		F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCat.entitlements; sourceTree = "<group>"; };
 		F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCat.swift; sourceTree = "<group>"; };
 		F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMainView.swift; sourceTree = "<group>"; };
@@ -75,6 +94,27 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		F467CB3125EABE4A00DD7B55 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F467CB5525EACDF200DD7B55 /* Creator */,
+				F467CB3325EABED600DD7B55 /* SettingsView.swift */,
+				F467CB3725EAC09600DD7B55 /* SettingsIcon.swift */,
+				F467CB3A25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift */,
+				F467CB4125EAC2B100DD7B55 /* SettingsRowTypeLink.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F467CB5525EACDF200DD7B55 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				F467CB5225EACDE700DD7B55 /* GeniusView.swift */,
+				F467CB4825EAC5B500DD7B55 /* ProfileView.swift */,
+			);
+			path = Creator;
+			sourceTree = "<group>";
+		};
 		F4E1CC7525E9AB540026EB32 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +134,7 @@
 		F4E1CC8025E9AB540026EB32 /* PomodoroCat */ = {
 			isa = PBXGroup;
 			children = (
+				F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */,
 				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
 				F4E1CC9125E9AB640026EB32 /* Views */,
 				F4E1CC9425E9AB9A0026EB32 /* View Model */,
@@ -123,6 +164,7 @@
 			children = (
 				F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */,
 				F4E1CCB825E9EC210026EB32 /* Timer */,
+				F467CB3125EABE4A00DD7B55 /* Settings */,
 				F4E1CCB925E9EC290026EB32 /* Cat */,
 			);
 			path = Views;
@@ -133,6 +175,7 @@
 			children = (
 				F4E1CCA525E9B77D0026EB32 /* Task.swift */,
 				F43E82FE25EA1C9400885499 /* AudioPlayer.swift */,
+				F467CB4C25EAC5F600DD7B55 /* Genius.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +201,8 @@
 			children = (
 				F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */,
 				F4E1CCA225E9B17B0026EB32 /* ScreenSize.swift */,
+				F467CB3D25EAC17500DD7B55 /* AppVersion.swift */,
+				F467CB4525EAC30C00DD7B55 /* Helper.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -263,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F467CB3E25EAC17500DD7B55 /* AppVersion.swift in Sources */,
 				F4E1CCA025E9AE660026EB32 /* TimerView.swift in Sources */,
 				F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */,
 				F43E82FF25EA1C9400885499 /* AudioPlayer.swift in Sources */,
@@ -270,11 +316,19 @@
 				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
 				F467CB2E25EA3F3900DD7B55 /* TimerTitleView.swift in Sources */,
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
+				F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */,
+				F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */,
+				F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
+				F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */,
 				F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */,
+				F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */,
+				F467CB4225EAC2B100DD7B55 /* SettingsRowTypeLink.swift in Sources */,
 				F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */,
+				F467CB3B25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift in Sources */,
 				F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */,
+				F467CB3825EAC09600DD7B55 /* SettingsIcon.swift in Sources */,
 				F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PomodoroCat/PomodoroCat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
@@ -412,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shengyuanlu.PomodoroCat;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuanlu.Pomodoro-Cat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -424,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PomodoroCat/PomodoroCat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
@@ -433,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shengyuanlu.PomodoroCat;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuanlu.Pomodoro-Cat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
