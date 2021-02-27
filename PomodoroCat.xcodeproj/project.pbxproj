@@ -25,6 +25,9 @@
 		F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4825EAC5B500DD7B55 /* ProfileView.swift */; };
 		F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4C25EAC5F600DD7B55 /* Genius.swift */; };
 		F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB5225EACDE700DD7B55 /* GeniusView.swift */; };
+		F4CA635125EADD64001FBA2C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635025EADD64001FBA2C /* CartView.swift */; };
+		F4CA635525EAE01D001FBA2C /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635425EAE01D001FBA2C /* CartViewCell.swift */; };
+		F4CA635A25EAE37E001FBA2C /* PurchaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */; };
 		F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */; };
 		F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */; };
 		F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E1CC8525E9AB560026EB32 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		F467CB4C25EAC5F600DD7B55 /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
 		F467CB5225EACDE700DD7B55 /* GeniusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusView.swift; sourceTree = "<group>"; };
 		F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCat.entitlements; sourceTree = "<group>"; };
+		F4CA635025EADD64001FBA2C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		F4CA635425EAE01D001FBA2C /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
+		F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItem.swift; sourceTree = "<group>"; };
 		F4E1CC7E25E9AB540026EB32 /* PomodoroCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCat.swift; sourceTree = "<group>"; };
 		F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMainView.swift; sourceTree = "<group>"; };
@@ -115,6 +121,15 @@
 			path = Creator;
 			sourceTree = "<group>";
 		};
+		F4CA634F25EADD05001FBA2C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				F4CA635025EADD64001FBA2C /* CartView.swift */,
+				F4CA635425EAE01D001FBA2C /* CartViewCell.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		F4E1CC7525E9AB540026EB32 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +181,7 @@
 				F4E1CCB825E9EC210026EB32 /* Timer */,
 				F467CB3125EABE4A00DD7B55 /* Settings */,
 				F4E1CCB925E9EC290026EB32 /* Cat */,
+				F4CA634F25EADD05001FBA2C /* Cart */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +192,7 @@
 				F4E1CCA525E9B77D0026EB32 /* Task.swift */,
 				F43E82FE25EA1C9400885499 /* AudioPlayer.swift */,
 				F467CB4C25EAC5F600DD7B55 /* Genius.swift */,
+				F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,10 +330,12 @@
 				F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */,
 				F43E82FF25EA1C9400885499 /* AudioPlayer.swift in Sources */,
 				F467CB2B25EA3C0A00DD7B55 /* ColorExtension.swift in Sources */,
+				F4CA635125EADD64001FBA2C /* CartView.swift in Sources */,
 				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
 				F467CB2E25EA3F3900DD7B55 /* TimerTitleView.swift in Sources */,
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
 				F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */,
+				F4CA635525EAE01D001FBA2C /* CartViewCell.swift in Sources */,
 				F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */,
 				F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
@@ -328,6 +347,7 @@
 				F467CB3B25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift in Sources */,
 				F4E1CCA325E9B17B0026EB32 /* ScreenSize.swift in Sources */,
 				F4E1CC8225E9AB540026EB32 /* PomodoroCat.swift in Sources */,
+				F4CA635A25EAE37E001FBA2C /* PurchaseItem.swift in Sources */,
 				F467CB3825EAC09600DD7B55 /* SettingsIcon.swift in Sources */,
 				F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */,
 			);
