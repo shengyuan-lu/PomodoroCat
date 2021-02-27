@@ -4,9 +4,9 @@ import SwiftUI
 struct Task: Equatable {
     var pomodoroSeconds:Float
     var relaxSeconds:Float
+    var totalSeconds:Float
     
-    var pomodoroCentiSeconds:Float
-    var relaxCentiSeconds:Float
+    var taskSecondStorage:[Float]
     
     var pomodoroTo:CGFloat
     var relaxTo:CGFloat
@@ -20,12 +20,12 @@ struct Task: Equatable {
         self.relaxSeconds = relaxSeconds
         self.pomodoroDegree = pomodoroDegree
         self.relaxDegreeWithPomodoro = relaxDegreeWithPomodoro
+        self.totalSeconds = pomodoroSeconds + relaxSeconds
         
-        pomodoroCentiSeconds = pomodoroSeconds * 100
-        relaxCentiSeconds = relaxSeconds * 100
+        self.taskSecondStorage = [pomodoroSeconds, relaxSeconds]
         
-        pomodoroTo = CGFloat(pomodoroSeconds / (pomodoroSeconds + relaxSeconds))
-        relaxTo = CGFloat(relaxSeconds / (pomodoroSeconds + relaxSeconds))
+        self.pomodoroTo = CGFloat(pomodoroSeconds / (totalSeconds))
+        self.relaxTo = CGFloat(relaxSeconds / (totalSeconds))
         
     }
 }
