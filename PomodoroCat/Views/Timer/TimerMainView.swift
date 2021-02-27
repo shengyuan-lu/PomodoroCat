@@ -3,8 +3,6 @@ import SwiftUI
 struct TimerMainView: View {
     
     // MARK: - Variable
-    @State private var timerStart:Bool = false
-    
     @StateObject var taskManager = TaskManager()
     
     // MARK: - View
@@ -12,13 +10,13 @@ struct TimerMainView: View {
         
         ScrollView {
             
-            TimerView(timerStart: $timerStart, taskManager: taskManager)
+            TimerView(taskManager: taskManager)
                 .padding(40)
             
             Button(action: {
-                timerStart.toggle()
+                taskManager.timerStart.toggle()
             }, label: {
-                Text(timerStart ? "Stop" : "Start")
+                Text(taskManager.timerStart ? "Stop" : "Start")
             })
         }
         

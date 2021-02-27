@@ -7,7 +7,10 @@ class TaskManager: ObservableObject {
     
     @Published var isWorking = true
     
+    @Published var timerStart = false
+    
     func timerFirePerSecond() {
+        
         if task.pomodoroSeconds != 0 {
             task.pomodoroSeconds -= 1
             
@@ -28,6 +31,7 @@ class TaskManager: ObservableObject {
     
     func resetTask() {
         self.isWorking = true
+        self.timerStart = false
         self.task = Task(pomodoroSeconds: 25, relaxSeconds: 5, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
     }
     
