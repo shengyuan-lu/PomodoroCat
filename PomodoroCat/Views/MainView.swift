@@ -23,9 +23,9 @@ struct MainView: View {
         NavigationView {
             
             VStack {
-                CatCoinView(taskManager: taskManager)
+                CatCoinView(taskManager: taskManager, selectionIndex: $selectionIndex)
                     .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .padding(.top, 10)
                 
                 TabView(selection: $selectionIndex) {
                     TimerMainView(taskManager: taskManager)

@@ -13,6 +13,8 @@ struct CatMainView: View {
     
     @State private var offset = CGSize(width: 96, height: 163)
     
+    @State var audioPlayer = AudioPlayer()
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -33,6 +35,7 @@ struct CatMainView: View {
                                 self.offset = gesture.translation
                             }
                             .onEnded({ (gesture) in
+                                audioPlayer.startPlayBack(audioUrl: AudioURL.catSound!)
                                 print("Cat location \(gesture.translation)")
                             })
                         

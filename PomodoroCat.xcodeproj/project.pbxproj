@@ -12,6 +12,8 @@
 		F43E830525EA1CF400885499 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830225EA1CF400885499 /* done.wav */; };
 		F43E830625EA1CF400885499 /* clickback.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830325EA1CF400885499 /* clickback.wav */; };
 		F43E830725EA1CF400885499 /* clickto.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830425EA1CF400885499 /* clickto.wav */; };
+		F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */; };
+		F44F5CF725EBB06C008FD5EA /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F5CF625EBB06C008FD5EA /* CatItem.swift */; };
 		F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */; };
 		F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */; };
 		F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */; };
@@ -52,6 +54,8 @@
 		F43E830225EA1CF400885499 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
 		F43E830325EA1CF400885499 /* clickback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickback.wav; sourceTree = "<group>"; };
 		F43E830425EA1CF400885499 /* clickto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickto.wav; sourceTree = "<group>"; };
+		F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "cat-sound.wav"; sourceTree = "<group>"; };
+		F44F5CF625EBB06C008FD5EA /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioURL.swift; sourceTree = "<group>"; };
 		F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
 		F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		F43E830125EA1CD100885499 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */,
 				F4AF1DF725EB7537002B0891 /* fail.wav */,
 				F4AF1DF425EB70C5002B0891 /* buy.wav */,
 				F43E830325EA1CF400885499 /* clickback.wav */,
@@ -208,6 +213,7 @@
 				F43E82FE25EA1C9400885499 /* AudioPlayer.swift */,
 				F467CB4C25EAC5F600DD7B55 /* Genius.swift */,
 				F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */,
+				F44F5CF625EBB06C008FD5EA /* CatItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				F4AF1DF825EB7537002B0891 /* fail.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
+				F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +360,7 @@
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
 				F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */,
 				F4CA635525EAE01D001FBA2C /* ShopItemCell.swift in Sources */,
+				F44F5CF725EBB06C008FD5EA /* CatItem.swift in Sources */,
 				F4DDB77125EB8A4300D34C9B /* TimerSettingsRow.swift in Sources */,
 				F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */,
 				F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */,
