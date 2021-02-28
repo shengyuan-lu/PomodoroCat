@@ -3,7 +3,8 @@ import SwiftUI
 struct MainView: View {
     
     // MARK: - Variable
-    @State private var showCartModal = false
+    @State private var showIAPCartModal = false
+    @State private var showCatCartModal = false
     
     @AppStorage("themeIndex") var themeIndex = 1
     
@@ -15,19 +16,28 @@ struct MainView: View {
     
     @StateObject var taskManager:TaskManager = TaskManager()
     
+    @StateObject var catManager:CatManager = CatManager()
+    
+    @State private var selectionIndex = 0
+    
     // MARK: - View
     var body: some View {
         
         NavigationView {
             
             VStack {
-                CatCoinView(taskManager: taskManager)
+                CatCoinView(taskManager: taskManager, selectionIndex: $selectionIndex)
                     .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                    .padding(.top, 10)
                 
-                TabView {
+                TabView(selection: $selectionIndex) {
                     TimerMainView(taskManager: taskManager)
-                    CatMainView()
+                        .padding(.top, 5)
+                        .tag(0)
+                    
+                    CatMainView(catManager: catManager)
+                        .tag(1)
+
                 }
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -36,11 +46,18 @@ struct MainView: View {
                 .navigationBarItems(
                     leading:
                         Button(action: {
-                            showCartModal.toggle()
+                            
+                            if selectionIndex == 0 {
+                                showIAPCartModal.toggle()
+                            } else if selectionIndex == 1 {
+                                showCatCartModal.toggle()
+                            }
+                            
                         }, label: {
                             Image(systemName: "cart.fill")
                                 .font(.title2)
-                        }).sheet(isPresented: self.$showCartModal, content: {
+                        })
+                        .sheet(isPresented: self.$showIAPCartModal, content: {
                             
                             NavigationView {
                                 ShopView(taskManager: taskManager)
@@ -50,8 +67,7 @@ struct MainView: View {
                             }
                             
                         })
-                    ,
-                    
+   ,
                     trailing:
                         NavigationLink(
                             destination: SettingsView(taskManager: taskManager),
@@ -59,9 +75,26 @@ struct MainView: View {
                                 Image(systemName: "gearshape.fill")
                                     .font(.title2)
                             }))
+                .sheet(isPresented: self.$showCatCartModal, content: {
+                    
+                    NavigationView {
+                    
+                        CatShopView(catManager: catManager, taskManager: taskManager)
+                            .preferredColorScheme(determineTheme(themeIndex))
+                            .navigationBarTitle(Text("Cat Items"))
+                            .navigationBarTitleDisplayMode(.inline)
+
+                    }
+                    
+                })
+                .onChange(of: selectionIndex, perform: { value in
+                    self.taskManager.resetTimer()
+                })
+  
+
             }
             
-
+            
         }
         .onAppear(perform: {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)

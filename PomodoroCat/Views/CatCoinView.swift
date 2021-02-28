@@ -13,6 +13,8 @@ struct CatCoinView: View {
     
     @AppStorage("catCoin") private var catCoin = 0
     
+    @Binding var selectionIndex:Int
+    
     let cornerRadius:CGFloat = 10
     
     // MARK: - View
@@ -20,36 +22,54 @@ struct CatCoinView: View {
         
         ZStack {
             
-            RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.pink, lineWidth: 5)
+            RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.yellow, lineWidth: 5)
             
-            HStack() {
-        
-                Text("Cat Coin:")
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.primary)
-                    .padding(.leading)
+            HStack {
+                
+                // Title
+                HStack {
+                    
+                    Image("currency-dollar-circle")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(Color.yellow)
+                        .padding(.vertical, 15)
+                    
+                    Text("Cat Coin:")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.yellow)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
+                        
+                }
+                .padding(.leading, 12)
                 
                 Spacer()
                 
-                Text("\(catCoin)")
+                // Number
+                Text("C \(catCoin)")
                     .font(.body)
                     .fontWeight(.bold)
                     .foregroundColor(Color.primary)
+                    .padding(.trailing, (selectionIndex == 0) ? 0 : 12)
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                        .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
-                    
-                    Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost Active \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
-                        .fontWeight(.bold)
-                        .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
-                                            ? Color.black : Color.white)
+                
+                // Boost Lable
+                
+                if selectionIndex == 0 {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: cornerRadius - 4)
+                            .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
+                        
+                        Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
+                            .fontWeight(.bold)
+                            .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
+                                                ? Color.black : Color.white)
+                    }
+                    .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 110 : 100, height: 30)
+                    .padding(.trailing, 10)
                 }
-                .frame(width: 170, height: 30)
-                .padding(.trailing, 10)
-                
-                
             }
         }
         .frame(height: 50)
@@ -59,7 +79,7 @@ struct CatCoinView: View {
 // MARK: - Preview
 struct CatCoinView_Previews: PreviewProvider {
     static var previews: some View {
-        CatCoinView(taskManager: TaskManager())
+        CatCoinView(taskManager: TaskManager(), selectionIndex: Binding.constant(0))
             .previewLayout(.fixed(width: 375, height: 50))
     }
 }
