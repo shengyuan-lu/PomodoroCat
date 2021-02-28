@@ -21,7 +21,7 @@ struct CatItem: Hashable {
     
     let index:Int
     
-    init(name:String, imageName:String, description: String, price: Int, happinessNum: Int, offset:[Float], index:Int) {
+    init(name:String, imageName:String, description: String, price: Int, happinessNum: Int, offset:[Float], index:Int, purchased:Bool) {
         self.name = name
         self.imageName = imageName
         self.description = description
@@ -29,6 +29,7 @@ struct CatItem: Hashable {
         self.happinessNum = happinessNum
         self.offset = offset
         self.index = index
+        self.purchased = purchased
     }
 }
 

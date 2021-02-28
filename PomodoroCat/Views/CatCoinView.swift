@@ -59,7 +59,7 @@ struct CatCoinView: View {
                 
                 if selectionIndex == 0 {
                     ZStack {
-                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        RoundedRectangle(cornerRadius: cornerRadius - 4)
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
                         
                         Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
@@ -67,7 +67,7 @@ struct CatCoinView: View {
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
                                                 ? Color.black : Color.white)
                     }
-                    .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 120 : 100, height: 30)
+                    .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 110 : 100, height: 30)
                     .padding(.trailing, 10)
                 }
             }

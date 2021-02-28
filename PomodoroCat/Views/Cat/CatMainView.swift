@@ -15,7 +15,7 @@ struct CatMainView: View {
     
     @State var audioPlayer = AudioPlayer()
     
-    @StateObject var catManager = CatManager()
+    @ObservedObject var catManager:CatManager
     
     var body: some View {
         
@@ -25,6 +25,19 @@ struct CatMainView: View {
                     .resizable()
                     .aspectRatio(geometry.size, contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
+                
+                
+                ForEach(self.catManager.catItemArray, id: \.self) { catItem in
+                    
+                    if catItem.purchased {
+                        Image(catItem.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100)
+                            .offset(CGSize(width: Double(catItem.offset[0]) , height: Double(catItem.offset[1])))
+                    }
+
+                }
                 
                 Image("cat")
                     .resizable()
@@ -43,6 +56,16 @@ struct CatMainView: View {
                         
                     )
                 
+                VStack {
+                    Text("Happiness: \(catManager.happiness) / 100")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding()
+                        .foregroundColor(Color.black)
+                    
+                    Spacer()
+                }
+                
             }
         }
         
@@ -51,6 +74,6 @@ struct CatMainView: View {
 
 struct CatMainView_Previews: PreviewProvider {
     static var previews: some View {
-        CatMainView()
+        CatMainView(catManager: CatManager())
     }
 }

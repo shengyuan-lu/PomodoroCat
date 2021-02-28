@@ -35,7 +35,7 @@ struct MainView: View {
                         .padding(.top, 5)
                         .tag(0)
                     
-                    CatMainView()
+                    CatMainView(catManager: catManager)
                         .tag(1)
 
                 }
