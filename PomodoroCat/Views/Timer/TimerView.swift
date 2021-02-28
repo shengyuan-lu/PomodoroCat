@@ -7,6 +7,13 @@ struct TimerView: View {
     
     @ObservedObject var taskManager:TaskManager
     
+    @AppStorage("work") private var work = 25
+    @AppStorage("shortRest") private var shortRest = 5
+    @AppStorage("longRest") private var longRest = 15
+    @AppStorage("numOfSection") private var numOfSection = 4
+    
+    @State var audioPlayer = AudioPlayer()
+    
     // MARK: - View
     var body: some View {
         
@@ -15,13 +22,17 @@ struct TimerView: View {
                 
                 VStack(spacing: 10) {
                     
-                    Text("\(taskManager.getCurrentNumMin()) min")
-                        .fontWeight(.bold)
-                        .font(.system(size: 45))
+                    if taskManager.timerStart {
+                        Text("\(taskManager.currentMinute) min")
+                            .fontWeight(.bold)
+                            .font(.system(size: 45))
+                    }
                     
-                    Text(taskManager.isWorking ? "Working" : "Relaxing")
+                    Text(taskManager.currentText)
                         .fontWeight(.light)
                         .font(.system(size: 30))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
                     
                 }
                 .frame(width: screenWidth/2.6, height: screenWidth/2.6, alignment: .center)
@@ -31,29 +42,20 @@ struct TimerView: View {
                 
                 ZStack {
                     
-                    Circle() // BG Gray Circle
+                    // BG Gray Circle
+                    Circle()
                         .trim(from: 0, to: 1)
                         .stroke(Color.gray.opacity(0.3), style: StrokeStyle(lineWidth: screenWidth/10, lineCap: .round))
                     
-                    Circle() // Relax Circle
-                        .trim(from: 0, to: taskManager.task.relaxTo)
-                        .stroke(Color.green, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
-                        .rotationEffect(.init(degrees: taskManager.task.relaxDegreeWithPomodoro))
+                    // Active Timer Circle
+                    Circle()
+                        .trim(from: 0, to: taskManager.currentTo)
+                        .stroke(taskManager.currentColor, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
                     
-                    Circle() // Pomodoro Circle
-                        .trim(from: 0, to: taskManager.task.pomodoroTo)
-                        .stroke(Color.pink, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
-                        .rotation3DEffect(
-                            .degrees(180),
-                            axis: (x: 1, y: 1, z: 0)
-                        )
-                        .rotationEffect(.degrees(taskManager.task.pomodoroDegree), anchor: .center)
-                        .rotation3DEffect(
-                            .degrees(180),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                    
+                    // Button
                     Button(action: {
+                        self.audioPlayer.startPlayBack(audioUrl: AudioURL.toggleOn!)
                         taskManager.timerStart.toggle()
                     }, label: {
                         Circle() // BG Gray Circle
@@ -64,24 +66,23 @@ struct TimerView: View {
                 }
                 .frame(width: screenWidth/1.5, height: screenWidth/1.5, alignment: .center)
                 
+                
             }
             
         }
         .onReceive(self.timer, perform: { _ in
-            
             if self.taskManager.timerStart {
                 
                 withAnimation {
-                    taskManager.timerFirePerSecond()
+                    taskManager.timerFired()
                 }
                 
             }
-            
         })
         .onChange(of: self.taskManager.timerStart, perform: { _ in
-            if self.taskManager.timerStart == false {
+            if !self.taskManager.timerStart {
                 withAnimation {
-                    taskManager.resetTask()
+                    taskManager.resetTimer()
                 }
             }
         })

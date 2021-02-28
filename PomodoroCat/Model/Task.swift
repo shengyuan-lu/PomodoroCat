@@ -2,30 +2,23 @@ import Foundation
 import SwiftUI
 
 struct Task: Equatable {
-    var pomodoroSeconds:Float
-    var relaxSeconds:Float
-    var totalSeconds:Float
     
-    var taskSecondStorage:[Float]
+    var workSeconds:Int
+    var shortRelaxSeconds:Int
+    var longRelaxSeconds:Int
+    var numOfSections:Int
     
-    var pomodoroTo:CGFloat
-    var relaxTo:CGFloat
+    let oneSectionTotalSeconds:Int
+    let taskStorage:[Int]
     
-    var pomodoroDegree:Double
-    var relaxDegreeWithPomodoro:Double
-    
-    init(pomodoroSeconds:Float, relaxSeconds:Float, pomodoroDegree:Double, relaxDegreeWithPomodoro:Double) {
+    init(workSeconds:Int = 25, shortRelaxSeconds:Int = 5, longRelaxSeconds:Int = 15, numOfSections:Int = 4) {
         
-        self.pomodoroSeconds = pomodoroSeconds
-        self.relaxSeconds = relaxSeconds
-        self.pomodoroDegree = pomodoroDegree
-        self.relaxDegreeWithPomodoro = relaxDegreeWithPomodoro
-        self.totalSeconds = pomodoroSeconds + relaxSeconds
+        self.workSeconds = workSeconds
+        self.shortRelaxSeconds = shortRelaxSeconds
+        self.longRelaxSeconds = longRelaxSeconds
+        self.numOfSections = numOfSections
+        self.oneSectionTotalSeconds = workSeconds + shortRelaxSeconds
         
-        self.taskSecondStorage = [pomodoroSeconds, relaxSeconds]
-        
-        self.pomodoroTo = CGFloat(pomodoroSeconds / (totalSeconds))
-        self.relaxTo = CGFloat(relaxSeconds / (totalSeconds))
-        
+        taskStorage = [workSeconds, shortRelaxSeconds, longRelaxSeconds, numOfSections]
     }
 }

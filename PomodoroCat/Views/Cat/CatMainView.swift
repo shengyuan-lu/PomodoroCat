@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct CatMainView: View {
+    
+    @AppStorage("catCoin") private var catCoin = 0
+    
     var body: some View {
         
-        ScrollView {
-            
-            Text("Cat goes here")
-            
-        }
+        Text("Cat goes here")
         
     }
 }

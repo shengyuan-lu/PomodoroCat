@@ -3,76 +3,137 @@ import SwiftUI
 
 class TaskManager: ObservableObject {
     
-    @Published var task = Task(pomodoroSeconds: 25, relaxSeconds: 5, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
-    
     @Published var isWorking = true
+    
+    @Published var isOnLongRelax = false
     
     @Published var timerStart = false
     
-    @Published var completedNum = 0
+    @Published var completedSection = 0
     
-    @Published var pomodoroDonePlayed = false
+    @Published var multiplierInfo:[Any] = [false, 2]
+    
+    @Published var task:Task = Task()
+    
+    @Published var currentTo:CGFloat = 1
+    
+    @Published var currentMinute:Int = 1
+    
+    @Published var currentColor:Color = Color.pink
+    
+    @Published var currentText:String = "Tap to Start"
+    
+    @Published var catCoin = 0
     
     var audioPlayer = AudioPlayer()
     
-    func timerFirePerSecond() {
-
-        if task.pomodoroSeconds != 0 {
-            task.pomodoroSeconds -= 1
-            
-            task.pomodoroTo = CGFloat(task.pomodoroSeconds / (task.totalSeconds))
-            
-        } else if task.pomodoroSeconds == 0 && task.relaxSeconds != 0 {
-            
-            self.isWorking = false
-            
-            task.relaxSeconds -= 1
-            
-            task.relaxTo = CGFloat(task.relaxSeconds / (task.totalSeconds))
-            
-        } else if task.relaxSeconds == 0 {
-            self.resetTask()
-            
-            self.completedNum += 1
-        }
+    func timerFired() {
         
-        checkIfPlayAudio()
-
+        // Sections
+        if completedSection < task.taskStorage[3] {
+            
+            // There are unfinished section
+            
+            if task.workSeconds != 0 {
+                // Working
+                
+                // Working session initialization
+                if task.workSeconds == task.taskStorage[0] {
+                    currentText = "Work"
+                    currentTo = 1
+                    currentColor = Color.pink
+                    currentMinute = task.workSeconds
+                }
+                
+                task.workSeconds -= 1
+                currentMinute = task.workSeconds
+                self.currentTo -= CGFloat( 1 / Double(task.taskStorage[0]))
+                
+                // Working session ends, play done sound and add catcoin
+                if task.workSeconds == 0 {
+                    audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                    self.addCatCoin(amount: 20)
+                }
+                
+                
+            } else if task.workSeconds == 0 && task.shortRelaxSeconds != 0 {
+                // Short relaxing
+                
+                // Relaxing session initialization
+                if task.shortRelaxSeconds == task.taskStorage[1] {
+                    currentText = "Short Break"
+                    currentTo = 1
+                    currentColor = Color.green
+                    currentMinute = task.shortRelaxSeconds
+                }
+                
+                task.shortRelaxSeconds -= 1
+                currentMinute = task.shortRelaxSeconds
+                self.currentTo -= CGFloat( 1 / Double(task.taskStorage[1]))
+                
+                // Short relax session ends, play done sound and add catcoin
+                if task.shortRelaxSeconds == 0 {
+                    audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                    self.addCatCoin(amount: 5)
+                }
+                
+            } else if task.shortRelaxSeconds == 0 {
+                // This section has ended!
+                completedSection += 1
+                currentTo = 1
+                task.workSeconds = task.taskStorage[0]
+                task.shortRelaxSeconds = task.taskStorage[1]
+                currentColor = Color.pink
+                currentText = "Work"
+                
+            }
+            
+            // Long relaxing
+        } else if completedSection == task.taskStorage[3] && task.longRelaxSeconds != 0 {
+            // Long relaxing initialization
+            if task.longRelaxSeconds == task.taskStorage[2] {
+                currentText = "Long Break"
+                currentTo = 1
+                currentColor = Color.blue
+                currentMinute = task.longRelaxSeconds
+            }
+            
+            task.longRelaxSeconds -= 1
+            currentMinute = task.longRelaxSeconds
+            self.currentTo -= CGFloat( 1 / Double(task.taskStorage[2]))
+            
+            // Long relax ends, play done sound and add coin
+            if task.longRelaxSeconds == 0 {
+                audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                self.addCatCoin(amount: 10)
+            }
+            
+            
+        } else if task.longRelaxSeconds == 0 {
+            // The project has ended, reset
+            resetTimer()
+        }
     }
     
-    func checkIfPlayAudio() {
-        if task.pomodoroTo == 0 && !pomodoroDonePlayed {
-            self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
-            
-            pomodoroDonePlayed = true
-        }
-        
-        
-        if task.pomodoroTo == 0 && task.relaxTo == 0 {
-            
-            self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
-            
-        }
-    }
-    
-    func resetTask() {
-        self.isWorking = true
+    func resetTimer() {
         self.timerStart = false
-        self.task = Task(pomodoroSeconds: 25, relaxSeconds: 5, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
+        completedSection = 0
+        currentTo = 1
+        task.workSeconds = task.taskStorage[0]
+        task.shortRelaxSeconds = task.taskStorage[1]
+        currentMinute = task.workSeconds
+        currentColor = Color.pink
+        currentText = "Tap to Start"
+        multiplierInfo = [false, 2]
     }
     
-    func getCurrentNumMin() -> Int {
-        if task.pomodoroSeconds != 0 {
-            return Int(task.pomodoroSeconds)
+    func addCatCoin(amount:Int) {
+        if self.multiplierInfo[0] as! Bool == true {
+            self.catCoin += (amount * (self.multiplierInfo[1] as! Int))
             
-        } else if task.pomodoroSeconds == 0 && task.relaxSeconds != 0 {
-            
-            return Int(task.relaxSeconds)
-            
-        } else if task.relaxSeconds == 0 {
-            return 0
+        } else {
+            self.catCoin += amount
         }
-        
-        return 0
     }
+    
 }
