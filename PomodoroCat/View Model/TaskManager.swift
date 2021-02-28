@@ -19,7 +19,7 @@ class TaskManager: ObservableObject {
     
     @Published var currentMinute:Int = 1
     
-    @Published var currentColor:Color = Color.pink
+    @Published var currentColor:Color = Color.blue
     
     @Published var currentText:String = "Tap to Start"
     
@@ -41,7 +41,7 @@ class TaskManager: ObservableObject {
                 if task.workSeconds == task.taskStorage[0] {
                     currentText = "Work"
                     currentTo = 1
-                    currentColor = Color.pink
+                    currentColor = Color.blue
                     currentMinute = task.workSeconds
                 }
                 
@@ -80,11 +80,19 @@ class TaskManager: ObservableObject {
             } else if task.shortRelaxSeconds == 0 {
                 // This section has ended!
                 completedSection += 1
+                
+                if completedSection != task.taskStorage[3] {
+                    task.workSeconds = task.taskStorage[0]
+                    task.shortRelaxSeconds = task.taskStorage[1]
+                    currentColor = Color.blue
+                    currentText = "Work"
+                    
+                } else if completedSection == task.taskStorage[3] {
+                    currentColor = Color.orange
+                    currentText = "Long Break"
+                }
+                
                 currentTo = 1
-                task.workSeconds = task.taskStorage[0]
-                task.shortRelaxSeconds = task.taskStorage[1]
-                currentColor = Color.pink
-                currentText = "Work"
                 
             }
             
@@ -94,7 +102,7 @@ class TaskManager: ObservableObject {
             if task.longRelaxSeconds == task.taskStorage[2] {
                 currentText = "Long Break"
                 currentTo = 1
-                currentColor = Color.blue
+                currentColor = Color.orange
                 currentMinute = task.longRelaxSeconds
             }
             
@@ -128,8 +136,9 @@ class TaskManager: ObservableObject {
         currentTo = 1
         task.workSeconds = task.taskStorage[0]
         task.shortRelaxSeconds = task.taskStorage[1]
+        task.longRelaxSeconds = task.taskStorage[2]
         currentMinute = task.workSeconds
-        currentColor = Color.pink
+        currentColor = Color.blue
         currentText = "Tap to Start"
         
     }

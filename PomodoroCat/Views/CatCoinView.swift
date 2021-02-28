@@ -22,7 +22,7 @@ struct CatCoinView: View {
         
         ZStack {
             
-            RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.pink, lineWidth: 5)
+            RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.yellow, lineWidth: 5)
             
             HStack {
                 
@@ -32,13 +32,13 @@ struct CatCoinView: View {
                     Image("currency-dollar-circle")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(Color.pink)
+                        .foregroundColor(Color.yellow)
                         .padding(.vertical, 15)
                     
                     Text("Cat Coin:")
                         .font(.body)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.pink)
+                        .foregroundColor(Color.yellow)
                         
                 }
                 .padding(.leading, 12)

@@ -10,6 +10,8 @@ struct CatItem: Hashable {
     
     let happinessNum:Int
     
+    
+    
     let id = UUID()
     
     init(name:String, description: String, price: Int, happinessNum: Int) {
@@ -19,3 +21,7 @@ struct CatItem: Hashable {
         self.happinessNum = happinessNum
     }
 }
+
+let catItemArray = [
+    1
+]

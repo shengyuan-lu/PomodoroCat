@@ -29,6 +29,7 @@ struct MainView: View {
                 
                 TabView(selection: $selectionIndex) {
                     TimerMainView(taskManager: taskManager)
+                        .padding(.top, 5)
                         .tag(0)
                     
                     CatMainView()

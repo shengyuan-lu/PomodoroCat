@@ -18,7 +18,7 @@ struct TimerMainView: View {
             VStack {
                 
                 HStack {
-                    Text("Section Progress:")
+                    Text("Section Completed:")
                         .font(.body)
                         .fontWeight(.bold)
                         .foregroundColor(Color.primary)
@@ -42,7 +42,7 @@ struct TimerMainView: View {
                     NavigationLink(
                         destination: TimerPickerView(bindingNum: $work, selectionIndex: (work - 10), lowerBound: 10, upperBound: 60, unit: "Minutes"),
                         label: {
-                            TimerSettingsRow(iconName: "hammer.fill", iconColor: Color.pink, firstText: "Work", secondText: "\(work) Minutes")
+                            TimerSettingsRow(iconName: "hammer.fill", iconColor: Color.blue, firstText: "Work", secondText: "\(work) Minutes")
                                 .padding(.vertical, 3)
                                 .buttonStyle(PlainButtonStyle())
                         }).id(UUID())
@@ -50,7 +50,7 @@ struct TimerMainView: View {
                     NavigationLink(
                         destination: TimerPickerView(bindingNum: $shortRest, selectionIndex: (shortRest - 5), lowerBound: 5, upperBound: 30, unit: "Minutes"),
                         label: {
-                            TimerSettingsRow(iconName: "die.face.3.fill", iconColor: Color.pink, firstText: "Short Break", secondText: "\(shortRest) Minutes")
+                            TimerSettingsRow(iconName: "die.face.3.fill", iconColor: Color.green, firstText: "Short Break", secondText: "\(shortRest) Minutes")
                                 .padding(.vertical, 3)
                                 .buttonStyle(PlainButtonStyle())
                         }).id(UUID())
@@ -58,7 +58,7 @@ struct TimerMainView: View {
                     NavigationLink(
                         destination: TimerPickerView(bindingNum: $longRest, selectionIndex: (longRest - 15), lowerBound: 15, upperBound: 90, unit: "Minutes"),
                         label: {
-                            TimerSettingsRow(iconName: "bed.double.fill", iconColor: Color.pink, firstText: "Long Break", secondText: "\(longRest) Minutes")
+                            TimerSettingsRow(iconName: "bed.double.fill", iconColor: Color.orange, firstText: "Long Break", secondText: "\(longRest) Minutes")
                                 .padding(.vertical, 3)
                                 .buttonStyle(PlainButtonStyle())
                         }).id(UUID())
@@ -66,7 +66,7 @@ struct TimerMainView: View {
                     NavigationLink(
                         destination: TimerPickerView(bindingNum: $numOfSection, selectionIndex: (numOfSection - 2), lowerBound: 2, upperBound: 10, unit: "Sections"),
                         label: {
-                            TimerSettingsRow(iconName: "rectangle.stack", iconColor: Color.pink, firstText: "Sections", secondText:"\(numOfSection)")
+                            TimerSettingsRow(iconName: "rectangle.stack", iconColor: Color.red, firstText: "Sections", secondText:"\(numOfSection)")
                                 .padding(.vertical, 3)
                                 .buttonStyle(PlainButtonStyle())
                         }).id(UUID())
