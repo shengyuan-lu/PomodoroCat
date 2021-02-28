@@ -8,15 +8,12 @@ struct SettingsView: View {
     // 0 = default, 1 = light, 2 = dark
     @AppStorage("themeIndex") private var themeIndex = 1
     
-    @State var checkAmount = ""
-    
-    @State var numberOfPeople = 0
-    
     @AppStorage("work") private var work = 25
     @AppStorage("shortRest") private var shortRest = 5
     @AppStorage("longRest") private var longRest = 15
     @AppStorage("numOfSection") private var numOfSection = 4
     
+    @ObservedObject var taskManager:TaskManager
     
     // MARK: - View
     var body: some View {
@@ -132,7 +129,19 @@ struct SettingsView: View {
                                         Text("Back")
                                     }
                                 })
+        .onChange(of: work, perform: { value in
+            taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+        })
+        .onChange(of: shortRest, perform: { value in
+            taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+        })
         
+        .onChange(of: longRest, perform: { value in
+            taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+        })
+        .onChange(of: numOfSection, perform: { value in
+            taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+        })
         
     }
     
@@ -141,6 +150,6 @@ struct SettingsView: View {
 // MARK: - Preview
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(taskManager: TaskManager())
     }
 }

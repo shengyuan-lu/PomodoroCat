@@ -7,7 +7,12 @@ struct MainView: View {
     
     @AppStorage("themeIndex") var themeIndex = 1
     
-    @StateObject var taskManager = TaskManager()
+    @AppStorage("work") private var work = 25
+    @AppStorage("shortRest") private var shortRest = 5
+    @AppStorage("longRest") private var longRest = 15
+    @AppStorage("numOfSection") private var numOfSection = 4
+    
+    @StateObject var taskManager:TaskManager = TaskManager()
     
     // MARK: - View
     var body: some View {
@@ -43,12 +48,16 @@ struct MainView: View {
                 
                 trailing:
                     NavigationLink(
-                        destination: SettingsView(),
+                        destination: SettingsView(taskManager: taskManager),
                         label: {
                             Image(systemName: "gearshape.fill")
                                 .font(.title2)
                         }))
         }
+        .onAppear(perform: {
+            taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+            taskManager.currentMinute = taskManager.task.workSeconds
+        })
         
         
     }
@@ -58,6 +67,6 @@ struct MainView: View {
 // MARK: - Preview
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(taskManager: TaskManager())
     }
 }

@@ -15,13 +15,15 @@ struct TimerView: View {
                 
                 VStack(spacing: 10) {
                     
-                    Text("\(taskManager.getCurrentNumMin()) min")
+                    Text("\(taskManager.currentMinute) min")
                         .fontWeight(.bold)
                         .font(.system(size: 45))
                     
                     Text(taskManager.currentText)
                         .fontWeight(.light)
                         .font(.system(size: 30))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
                     
                 }
                 .frame(width: screenWidth/2.6, height: screenWidth/2.6, alignment: .center)
@@ -39,7 +41,8 @@ struct TimerView: View {
                     // Active Timer Circle
                     Circle()
                         .trim(from: 0, to: taskManager.currentTo)
-                        .stroke(Color.green, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
+                        .stroke(taskManager.currentColor, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
                     
                     // Button
                     Button(action: {
@@ -61,14 +64,14 @@ struct TimerView: View {
             if self.taskManager.timerStart {
                 
                 withAnimation {
-                    
+                    taskManager.timerFired()
                 }
                 
             }
             
         })
         .onChange(of: self.taskManager.timerStart, perform: { _ in
-            if self.taskManager.timerStart == false {
+            if !self.taskManager.timerStart{
                 withAnimation {
                     
                 }
