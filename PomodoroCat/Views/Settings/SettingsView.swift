@@ -131,16 +131,20 @@ struct SettingsView: View {
                                 })
         .onChange(of: work, perform: { value in
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+            taskManager.resetTimer()
         })
         .onChange(of: shortRest, perform: { value in
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+            taskManager.resetTimer()
         })
         
         .onChange(of: longRest, perform: { value in
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+            taskManager.resetTimer()
         })
         .onChange(of: numOfSection, perform: { value in
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
+            taskManager.resetTimer()
         })
         
     }

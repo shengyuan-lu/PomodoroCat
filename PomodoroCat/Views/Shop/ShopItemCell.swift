@@ -14,7 +14,6 @@ struct ShopItemCell: View {
     // MARK: - Body
     var body: some View {
         
-        
         ZStack {
             
             VStack(alignment:.leading) {
@@ -32,7 +31,7 @@ struct ShopItemCell: View {
                         .lineLimit(nil)
                 }
                 .alert(isPresented: $showingSuccessAlert) {
-                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchaed a multiplier for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
+                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(purchaseItem.multiplier)X multiplier for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
                 }
                 
                 Spacer()

@@ -23,6 +23,8 @@ class TaskManager: ObservableObject {
     
     @Published var currentText:String = "Tap to Start"
     
+    @Published var catCoin = 0
+    
     var audioPlayer = AudioPlayer()
     
     func timerFired() {
@@ -105,16 +107,21 @@ class TaskManager: ObservableObject {
             
             
         } else if task.longRelaxSeconds == 0 {
-            // The project has ended
-            self.timerStart = false
-            completedSection = 0
-            currentTo = 1
-            task.workSeconds = task.taskStorage[0]
-            task.shortRelaxSeconds = task.taskStorage[1]
-            currentMinute = task.workSeconds
-            currentColor = Color.pink
-            currentText = "Tap to Start"
+            // The project has ended, reset
+            resetTimer()
         }
+    }
+    
+    func resetTimer() {
+        self.timerStart = false
+        completedSection = 0
+        currentTo = 1
+        task.workSeconds = task.taskStorage[0]
+        task.shortRelaxSeconds = task.taskStorage[1]
+        currentMinute = task.workSeconds
+        currentColor = Color.pink
+        currentText = "Tap to Start"
+        multiplierInfo = [false, 2]
     }
     
     func addCatCoin() -> Int {

@@ -7,6 +7,11 @@ struct TimerView: View {
     
     @ObservedObject var taskManager:TaskManager
     
+    @AppStorage("work") private var work = 25
+    @AppStorage("shortRest") private var shortRest = 5
+    @AppStorage("longRest") private var longRest = 15
+    @AppStorage("numOfSection") private var numOfSection = 4
+    
     // MARK: - View
     var body: some View {
         
@@ -60,20 +65,16 @@ struct TimerView: View {
             
         }
         .onReceive(self.timer, perform: { _ in
-            
             if self.taskManager.timerStart {
-                
                 withAnimation {
                     taskManager.timerFired()
                 }
-                
             }
-            
         })
         .onChange(of: self.taskManager.timerStart, perform: { _ in
-            if !self.taskManager.timerStart{
+            if !self.taskManager.timerStart {
                 withAnimation {
-                    
+                    taskManager.resetTimer()
                 }
             }
         })

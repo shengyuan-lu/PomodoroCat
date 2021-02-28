@@ -12,6 +12,8 @@ struct MainView: View {
     @AppStorage("longRest") private var longRest = 15
     @AppStorage("numOfSection") private var numOfSection = 4
     
+    @AppStorage("catCoin") private var catCoin = 0
+    
     @StateObject var taskManager:TaskManager = TaskManager()
     
     // MARK: - View
@@ -57,6 +59,8 @@ struct MainView: View {
         .onAppear(perform: {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
             taskManager.currentMinute = taskManager.task.workSeconds
+            
+            taskManager.catCoin = catCoin
         })
         
         
