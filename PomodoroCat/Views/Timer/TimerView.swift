@@ -72,9 +72,11 @@ struct TimerView: View {
         }
         .onReceive(self.timer, perform: { _ in
             if self.taskManager.timerStart {
+                
                 withAnimation {
                     taskManager.timerFired()
                 }
+                
             }
         })
         .onChange(of: self.taskManager.timerStart, perform: { _ in
