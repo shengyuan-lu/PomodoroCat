@@ -25,7 +25,7 @@ struct TimerMainView: View {
                         
                     Spacer()
                     
-                    Text("\(taskManager.completedSection)/\(taskManager.task.numOfSections)")
+                    Text("\(taskManager.completedSection) / \(taskManager.task.numOfSections)")
                         .font(.body)
                         .fontWeight(.bold)
                         .foregroundColor(Color.primary)

@@ -116,6 +116,13 @@ class TaskManager: ObservableObject {
     }
     
     func resetTimer() {
+        
+        if (task.workSeconds == task.taskStorage[0]) && (multiplierInfo[0] as! Bool == true) {
+            // Do Nothing, the boost purchased is still effective
+        } else {
+            multiplierInfo = [false, 2]
+        }
+        
         self.timerStart = false
         completedSection = 0
         currentTo = 1
@@ -124,7 +131,7 @@ class TaskManager: ObservableObject {
         currentMinute = task.workSeconds
         currentColor = Color.pink
         currentText = "Tap to Start"
-        multiplierInfo = [false, 2]
+        
     }
     
     func addCatCoin(amount:Int) {
