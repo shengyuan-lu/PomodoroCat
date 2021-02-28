@@ -17,11 +17,23 @@ struct TimerMainView: View {
             
             VStack {
                 
-                Text("Section Progress: \(taskManager.completedSection)/\(taskManager.task.numOfSections)")
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.primary)
-                    .padding(.vertical, 10)
+                HStack {
+                    Text("Section Progress:")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.primary)
+                        
+                    Spacer()
+                    
+                    Text("\(taskManager.completedSection)/\(taskManager.task.numOfSections)")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.primary)
+                }
+                .padding(.vertical, 5)
+                .padding(.horizontal, 25)
+                .padding(.bottom, 5)
+                
                 
                 TimerView(taskManager: taskManager)
                     .padding(20)

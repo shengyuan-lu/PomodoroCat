@@ -79,19 +79,19 @@ struct SettingsView: View {
                         }).id(UUID())
                 }
                 
-                // Link Section
-                Section(header: Text("Links")) {
-                    SettingsRowTypeLink(iconName: "globe", iconColor: Color.purple, text: "Developer Website", link: "https://www.google.com")
-                    SettingsRowTypeLink(iconName: "hand.raised.fill", iconColor: Color.gray, text: "Privacy Policy", link: "https://www.google.com")
-                }
-                .padding(.vertical, 3)
-                
                 // About Section
                 Section(header: Text("About")) {
                     SettingsRowTypeAbout(iconName: "apps.iphone", iconColor: Color.blue, firstText: "Application", secondText: "PomodoroCat")
                     SettingsRowTypeAbout(iconName: "checkmark.circle.fill", iconColor: Color.green, firstText: "Compatibility", secondText: "iPhone")
                     SettingsRowTypeAbout(iconName: "swift", iconColor: Color.orange, firstText: "Programming Language", secondText: "Swift")
                     SettingsRowTypeAbout(iconName: "flag", iconColor: Color.red, firstText: "App Version", secondText: "\(AppVersion.version!)")
+                }
+                .padding(.vertical, 3)
+                
+                // Link Section
+                Section(header: Text("Links")) {
+                    SettingsRowTypeLink(iconName: "globe", iconColor: Color.purple, text: "Developer Website", link: "https://www.google.com")
+                    SettingsRowTypeLink(iconName: "hand.raised.fill", iconColor: Color.gray, text: "Privacy Policy", link: "https://www.google.com")
                 }
                 .padding(.vertical, 3)
 

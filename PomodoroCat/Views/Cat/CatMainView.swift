@@ -11,7 +11,7 @@ struct CatMainView: View {
     
     @AppStorage("catCoin") private var catCoin = 0
     
-    @State private var offset = CGSize.zero
+    @State private var offset = CGSize(width: 96, height: 163)
     
     var body: some View {
         
@@ -26,12 +26,16 @@ struct CatMainView: View {
                     .resizable()
                     .scaledToFit()
                     .offset(offset)
-                    .frame(width: 200)
+                    .frame(width: 150)
                     .gesture(
                         DragGesture()
                             .onChanged { gesture in
                                 self.offset = gesture.translation
                             }
+                            .onEnded({ (gesture) in
+                                print("Cat location \(gesture.translation)")
+                            })
+                        
                     )
                 
             }

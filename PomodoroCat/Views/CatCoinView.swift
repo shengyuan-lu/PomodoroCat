@@ -46,7 +46,7 @@ struct CatCoinView: View {
                         .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
                                             ? Color.black : Color.white)
                 }
-                .frame(width: 170, height: 30)
+                .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 160 : 100, height: 30)
                 .padding(.trailing, 10)
                 
                 
