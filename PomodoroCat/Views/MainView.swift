@@ -61,7 +61,7 @@ struct MainView: View {
                             }))
             }
             
-
+            
         }
         .onAppear(perform: {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
