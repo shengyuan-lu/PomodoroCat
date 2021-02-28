@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>542879227184-qalso1erama968andams9679uhhgpd0j.apps.googleusercontent.com</string>
+	<string>684913449503-vv7dtm0nd7dvib54insjp4orsfgu1f1r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.542879227184-qalso1erama968andams9679uhhgpd0j</string>
+	<string>com.googleusercontent.apps.684913449503-vv7dtm0nd7dvib54insjp4orsfgu1f1r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAghOdSNqwKDNoLRf2ZNMuV68moBkEhAt4</string>
+	<string>AIzaSyCqqsl1eyFUM4cQ_8Awk9LsSDpXz0xRFPs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>542879227184</string>
+	<string>684913449503</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.shengyuanlu.TomatoCat</string>
+	<string>com.shengyuanlu.PomodoroCat</string>
 	<key>PROJECT_ID</key>
-	<string>tomatocat2021</string>
+	<string>pomodoracat</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tomatocat2021.appspot.com</string>
+	<string>pomodoracat.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:542879227184:ios:fe17fcaf3c7f7e77c33cf5</string>
-	<key>DATABASE_URL</key>
-	<string>https://tomatocat2021-default-rtdb.firebaseio.com</string>
+	<string>1:684913449503:ios:021c9676d82ad791af932a</string>
 </dict>
 </plist>

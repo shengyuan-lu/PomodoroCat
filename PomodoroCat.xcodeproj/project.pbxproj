@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2659790425EACA65004EA251 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659790325EACA65004EA251 /* LoginMainView.swift */; };
+		2659792D25EAD0E5004EA251 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2659792C25EAD0E5004EA251 /* GoogleService-Info.plist */; };
+		9C461CA696EA2331EE810E47 /* Pods_PomodoroCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F5F86267D7F7661467B313 /* Pods_PomodoroCat.framework */; };
 		F43E82FF25EA1C9400885499 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E82FE25EA1C9400885499 /* AudioPlayer.swift */; };
 		F43E830525EA1CF400885499 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830225EA1CF400885499 /* done.wav */; };
 		F43E830625EA1CF400885499 /* clickback.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830325EA1CF400885499 /* clickback.wav */; };
 		F43E830725EA1CF400885499 /* clickto.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830425EA1CF400885499 /* clickto.wav */; };
 		F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */; };
 		F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */; };
-		F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */; };
 		F467CB2B25EA3C0A00DD7B55 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */; };
 		F467CB2E25EA3F3900DD7B55 /* TimerTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2D25EA3F3900DD7B55 /* TimerTitleView.swift */; };
 		F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3325EABED600DD7B55 /* SettingsView.swift */; };
@@ -42,13 +44,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07F5F86267D7F7661467B313 /* Pods_PomodoroCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomodoroCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2659790325EACA65004EA251 /* LoginMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainView.swift; sourceTree = "<group>"; };
+		2659792C25EAD0E5004EA251 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A20AE6D03BA875E8260C4DE7 /* Pods-PomodoroCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoroCat.debug.xcconfig"; path = "Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat.debug.xcconfig"; sourceTree = "<group>"; };
 		F43E82FE25EA1C9400885499 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		F43E830225EA1CF400885499 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
 		F43E830325EA1CF400885499 /* clickback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickback.wav; sourceTree = "<group>"; };
 		F43E830425EA1CF400885499 /* clickto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickto.wav; sourceTree = "<group>"; };
 		F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioURL.swift; sourceTree = "<group>"; };
 		F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
-		F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F467CB2D25EA3F3900DD7B55 /* TimerTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTitleView.swift; sourceTree = "<group>"; };
 		F467CB3325EABED600DD7B55 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatMainView.swift; sourceTree = "<group>"; };
+		FB4630A1BFADF5F8A42FB161 /* Pods-PomodoroCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoroCat.release.xcconfig"; path = "Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +90,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C461CA696EA2331EE810E47 /* Pods_PomodoroCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2659790225EACA54004EA251 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2659790325EACA65004EA251 /* LoginMainView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		436C929E6131C69239BF1D15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07F5F86267D7F7661467B313 /* Pods_PomodoroCat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72B153218A13FDF30A73C83E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20AE6D03BA875E8260C4DE7 /* Pods-PomodoroCat.debug.xcconfig */,
+				FB4630A1BFADF5F8A42FB161 /* Pods-PomodoroCat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F43E830125EA1CD100885499 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +167,8 @@
 			children = (
 				F4E1CC8025E9AB540026EB32 /* PomodoroCat */,
 				F4E1CC7F25E9AB540026EB32 /* Products */,
+				72B153218A13FDF30A73C83E /* Pods */,
+				436C929E6131C69239BF1D15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +183,7 @@
 		F4E1CC8025E9AB540026EB32 /* PomodoroCat */ = {
 			isa = PBXGroup;
 			children = (
+				2659792C25EAD0E5004EA251 /* GoogleService-Info.plist */,
 				F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */,
 				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
 				F4E1CC9125E9AB640026EB32 /* Views */,
@@ -159,7 +194,6 @@
 				F43E830125EA1CD100885499 /* Sound */,
 				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
-				F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */,
 				F4E1CC8A25E9AB560026EB32 /* Info.plist */,
 				F4E1CC8725E9AB560026EB32 /* Preview Content */,
 			);
@@ -178,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */,
+				2659790225EACA54004EA251 /* Login */,
 				F4E1CCB825E9EC210026EB32 /* Timer */,
 				F467CB3125EABE4A00DD7B55 /* Settings */,
 				F4E1CCB925E9EC290026EB32 /* Cat */,
@@ -258,9 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4E1CC8D25E9AB560026EB32 /* Build configuration list for PBXNativeTarget "PomodoroCat" */;
 			buildPhases = (
+				B8C221C6ED3926F5956C43EE /* [CP] Check Pods Manifest.lock */,
 				F4E1CC7A25E9AB540026EB32 /* Sources */,
 				F4E1CC7B25E9AB540026EB32 /* Frameworks */,
 				F4E1CC7C25E9AB540026EB32 /* Resources */,
+				335BB986BDA1FB6084165C0A /* [CP] Copy Pods Resources */,
+				5A67DD4054495B736F871651 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,12 +351,71 @@
 				F43E830725EA1CF400885499 /* clickto.wav in Resources */,
 				F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */,
 				F43E830525EA1CF400885499 /* done.wav in Resources */,
+				2659792D25EAD0E5004EA251 /* GoogleService-Info.plist in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
-				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		335BB986BDA1FB6084165C0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A67DD4054495B736F871651 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PomodoroCat/Pods-PomodoroCat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8C221C6ED3926F5956C43EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomodoroCat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4E1CC7A25E9AB540026EB32 /* Sources */ = {
@@ -334,6 +431,7 @@
 				F4E1CC8425E9AB540026EB32 /* TimerMainView.swift in Sources */,
 				F467CB2E25EA3F3900DD7B55 /* TimerTitleView.swift in Sources */,
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
+				2659790425EACA65004EA251 /* LoginMainView.swift in Sources */,
 				F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */,
 				F4CA635525EAE01D001FBA2C /* CartViewCell.swift in Sources */,
 				F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */,
@@ -474,12 +572,14 @@
 		};
 		F4E1CC8E25E9AB560026EB32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20AE6D03BA875E8260C4DE7 /* Pods-PomodoroCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_ENTITLEMENTS = PomodoroCat/PomodoroCat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WMFKF24VVS;
+				DEVELOPMENT_TEAM = QUGR6DUSUC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PomodoroCat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -489,6 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuanlu.Pomodoro-Cat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -496,12 +597,14 @@
 		};
 		F4E1CC8F25E9AB560026EB32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4630A1BFADF5F8A42FB161 /* Pods-PomodoroCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_ENTITLEMENTS = PomodoroCat/PomodoroCat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WMFKF24VVS;
+				DEVELOPMENT_TEAM = QUGR6DUSUC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PomodoroCat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -511,6 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuanlu.Pomodoro-Cat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
