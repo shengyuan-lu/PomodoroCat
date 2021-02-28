@@ -23,8 +23,8 @@ struct CatShopView: View {
         
         
         ScrollView {
-            ForEach(catItemArray, id: \.self) { catItem in
-                CatShopCell(catItem: catItem, catManager: catManager, taskManager: taskManager)
+            ForEach(catManager.catItemArray, id: \.self) { catItem in
+                CatShopCell(catItem: catItem, taskManager: taskManager, catManager: catManager)
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
             }

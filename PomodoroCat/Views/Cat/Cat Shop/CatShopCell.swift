@@ -9,9 +9,9 @@ struct CatShopCell: View {
     
     @State var showingFailedAlert = false
     
-    @ObservedObject var catManager:CatManager
-    
     @ObservedObject var taskManager:TaskManager
+    
+    @ObservedObject var catManager:CatManager
     
     @State var audioPlayer = AudioPlayer()
     
@@ -100,7 +100,11 @@ struct CatShopCell: View {
     func checkAlertAndBuy() {
         if !catItem.purchased && taskManager.catCoin >= catItem.price{
             showingSuccessAlert = true
+            
             catItem.purchased = true
+            catManager.catItemArray[catItem.index].purchased = true
+            
+            catManager.happiness += catItem.happinessNum
             
             taskManager.catCoin -= catItem.price
             
@@ -116,6 +120,6 @@ struct CatShopCell: View {
 // MARK: - Preview
 struct CatShopCell_Previews: PreviewProvider {
     static var previews: some View {
-        CatShopCell(catItem: catItemArray[0], catManager: CatManager(), taskManager: TaskManager())
+        CatShopCell(catItem: CatManager().catItemArray[0], taskManager: TaskManager(), catManager: CatManager())
     }
 }
