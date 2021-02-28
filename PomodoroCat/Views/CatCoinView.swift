@@ -39,6 +39,8 @@ struct CatCoinView: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .foregroundColor(Color.yellow)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
                         
                 }
                 .padding(.leading, 12)
@@ -46,7 +48,7 @@ struct CatCoinView: View {
                 Spacer()
                 
                 // Number
-                Text("\(catCoin)")
+                Text("C \(catCoin)")
                     .font(.body)
                     .fontWeight(.bold)
                     .foregroundColor(Color.primary)
@@ -60,12 +62,12 @@ struct CatCoinView: View {
                         RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
                         
-                        Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost Active \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
+                        Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
                             .fontWeight(.bold)
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
                                                 ? Color.black : Color.white)
                     }
-                    .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 160 : 100, height: 30)
+                    .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 120 : 100, height: 30)
                     .padding(.trailing, 10)
                 }
             }

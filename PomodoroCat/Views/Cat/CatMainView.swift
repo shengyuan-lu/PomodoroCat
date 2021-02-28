@@ -15,6 +15,8 @@ struct CatMainView: View {
     
     @State var audioPlayer = AudioPlayer()
     
+    @StateObject var catManager = CatManager()
+    
     var body: some View {
         
         GeometryReader { geometry in
