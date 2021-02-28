@@ -1,10 +1,3 @@
-//
-//  TabView.swift
-//  TomatoCat
-//
-//  Created by Shengyuan Lu on 2/26/21.
-//
-
 import SwiftUI
 
 struct MainView: View {
@@ -12,7 +5,9 @@ struct MainView: View {
     // MARK: - Variable
     @State private var showCartModal = false
     
-    @AppStorage("themeIndex") private var themeIndex = 1
+    @AppStorage("themeIndex") var themeIndex = 1
+    
+    @StateObject var taskManager = TaskManager()
     
     // MARK: - View
     var body: some View {
@@ -20,7 +15,7 @@ struct MainView: View {
         NavigationView {
             
             TabView {
-                TimerMainView()
+                TimerMainView(taskManager: taskManager)
                 CatMainView()
             }
             .tabViewStyle(PageTabViewStyle())
@@ -37,12 +32,12 @@ struct MainView: View {
                     }).sheet(isPresented: self.$showCartModal, content: {
                         
                         NavigationView {
-                            CartView()
+                            ShopView(taskManager: taskManager)
                                 .preferredColorScheme(determineTheme(themeIndex))
                                 .navigationBarTitle(Text("Purchase Multiplier"))
                                 .navigationBarTitleDisplayMode(.inline)
                         }
-
+                        
                     })
                 ,
                 

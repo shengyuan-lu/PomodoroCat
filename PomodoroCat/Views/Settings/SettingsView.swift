@@ -8,6 +8,16 @@ struct SettingsView: View {
     // 0 = default, 1 = light, 2 = dark
     @AppStorage("themeIndex") private var themeIndex = 1
     
+    @State var checkAmount = ""
+    
+    @State var numberOfPeople = 0
+    
+    @AppStorage("work") private var work = 25
+    @AppStorage("shortRest") private var shortRest = 5
+    @AppStorage("longRest") private var longRest = 15
+    @AppStorage("numOfSection") private var numOfSection = 4
+    
+    
     // MARK: - View
     var body: some View {
         
@@ -16,40 +26,38 @@ struct SettingsView: View {
             // Form
             Form {
                 
-                Section(header: Text("Developers")) {
+                // Timer Section
+                Section(header: Text("Timer")) {
                     
                     NavigationLink(
-                        destination: GeniusView(),
+                        destination: TimerPicker(bindingNum: $work, selectionIndex: (work - 10), lowerBound: 10, upperBound: 60, unit: "Minutes"),
                         label: {
-                            SettingsRowTypeAbout(iconName: "person.fill", iconColor: Color.pink, firstText: "Creators", secondText: "Stanford Rejects")
+                            SettingsRowTypeAbout(iconName: "hammer.fill", iconColor: Color.tomato, firstText: "Work", secondText: "\(work) Minutes")
+                                .padding(.vertical)
+                        }).id(UUID())
+                    
+                    NavigationLink(
+                        destination: TimerPicker(bindingNum: $shortRest, selectionIndex: (shortRest - 5), lowerBound: 5, upperBound: 30, unit: "Minutes"),
+                        label: {
+                            SettingsRowTypeAbout(iconName: "die.face.3.fill", iconColor: Color.tomato, firstText: "Short Rest", secondText: "\(shortRest) Minutes")
+                                .padding(.vertical)
+                        }).id(UUID())
+                    
+                    NavigationLink(
+                        destination: TimerPicker(bindingNum: $longRest, selectionIndex: (longRest - 15), lowerBound: 15, upperBound: 90, unit: "Minutes"),
+                        label: {
+                            SettingsRowTypeAbout(iconName: "bed.double.fill", iconColor: Color.tomato, firstText: "Long Rest", secondText: "\(longRest) Minutes")
+                                .padding(.vertical)
+                        }).id(UUID())
+                    
+                    NavigationLink(
+                        destination: TimerPicker(bindingNum: $numOfSection, selectionIndex: (numOfSection - 2), lowerBound: 2, upperBound: 10, unit: "Sections"),
+                        label: {
+                            SettingsRowTypeAbout(iconName: "rectangle.stack", iconColor: Color.tomato, firstText: "Sections", secondText:"\(numOfSection)")
                                 .padding(.vertical)
                         }).id(UUID())
                     
                 }
-                
-                /*
-                 // Language Section
-                 Section(header: Text("Language")){
-                 Picker(LocalizedStringKey("Language"), selection: $languageIndex) {
-                 Text("🌐 Default").tag(0)
-                 Text("🇺🇸 English").tag(1)
-                 Text("🇨🇳 Chinese").tag(2)
-                 
-                 }
-                 .id(UUID())
-                 .pickerStyle(DefaultPickerStyle())
-                 .padding()
-                 
-                 HStack {
-                 Spacer()
-                 Text("This is an experimental feature")
-                 .multilineTextAlignment(.center)
-                 .font(.footnote)
-                 .foregroundColor(.secondary)
-                 Spacer()
-                 }
-                 }
-                 */
                 
                 // Theme Section
                 Section(header: Text("Theme")) {
@@ -71,12 +79,27 @@ struct SettingsView: View {
                 }
                 .padding(.vertical, 3)
                 
+
+                
+                // Developer Section
+                Section(header: Text("Developers")) {
+                    
+                    NavigationLink(
+                        destination: GeniusView(),
+                        label: {
+                            SettingsRowTypeAbout(iconName: "person.fill", iconColor: Color.pink, firstText: "Developers", secondText: "Stanford Rejects")
+                                .padding(.vertical)
+                        }).id(UUID())
+                }
+                
                 // Link Section
                 Section(header: Text("Links")) {
                     SettingsRowTypeLink(iconName: "globe", iconColor: Color.purple, text: "Developer Website", link: "https://www.google.com")
                     SettingsRowTypeLink(iconName: "hand.raised.fill", iconColor: Color.gray, text: "Privacy Policy", link: "https://www.google.com")
                 }
                 .padding(.vertical, 3)
+
+                
                 
                 // Footer
                 HStack {
@@ -96,7 +119,6 @@ struct SettingsView: View {
             
             
         }
-        .statusBar(hidden: true)
         .navigationBarTitle("Settings", displayMode: .inline)
         // Hide the system back button
         .navigationBarBackButtonHidden(true)

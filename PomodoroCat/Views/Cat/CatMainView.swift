@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct CatMainView: View {
+    
     var body: some View {
         
-        ScrollView {
-            
-            Text("Cat goes here")
-            
-        }
+        Text("Cat goes here")
         
     }
 }

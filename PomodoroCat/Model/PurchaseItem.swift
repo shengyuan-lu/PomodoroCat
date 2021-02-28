@@ -22,6 +22,6 @@ struct PurchaseItem:Hashable {
 }
 
 let purchaseItemArray = [
-    PurchaseItem(name: "2X Cat Coin Multiplier", description: "Get more cat coins in one session", multiplier: 2, price: "1.99"),
-    PurchaseItem(name: "10X Cat Coin Multiplier", description: "Get even more cat coins in one session", multiplier: 2, price: "3.99")
+    PurchaseItem(name: "2X Cat Coin Multiplier", description: "Get double cat coins in your next session. Single Use.", multiplier: 2, price: "1.99"),
+    PurchaseItem(name: "10X Cat Coin Multiplier", description: "Get 10X more cat coins in your next session. Single Use.", multiplier: 10, price: "3.99")
 ]

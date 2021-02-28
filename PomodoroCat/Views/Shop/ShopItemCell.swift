@@ -1,16 +1,15 @@
-//
-//  CartViewCell.swift
-//  PomodoroCat
-//
-//  Created by Shengyuan Lu on 2/27/21.
-//
-
 import SwiftUI
 
-struct CartViewCell: View {
+struct ShopItemCell: View {
     
     // MARK: - Variable
     let purchaseItem:PurchaseItem
+    
+    @State private var showingSuccessAlert = false
+    
+    @State private var showingFailedAlert = false
+    
+    @ObservedObject var taskManager:TaskManager
     
     // MARK: - Body
     var body: some View {
@@ -29,6 +28,11 @@ struct CartViewCell: View {
                     Text(purchaseItem.description)
                         .font(.body)
                         .fontWeight(.regular)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(nil)
+                }
+                .alert(isPresented: $showingSuccessAlert) {
+                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchaed a multiplier for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
                 }
                 
                 Spacer()
@@ -38,6 +42,7 @@ struct CartViewCell: View {
                     Spacer()
                     
                     Button(action: {
+                        checkAlertAndBuy()
                         
                     }, label: {
                         Text("Buy $\(purchaseItem.price)")
@@ -48,14 +53,13 @@ struct CartViewCell: View {
                             .background(Color.green)
                             .cornerRadius(10)
                             .foregroundColor(.white)
- 
+                        
                     })
-                    
+                    .alert(isPresented: $showingFailedAlert) {
+                        Alert(title: Text("Purchase Failed"), message: Text("There is already a multiplier active"), dismissButton: .default(Text("Got it!")))
+                    }
                 }
-                
             }
-            
-            
         }
         .padding()
         .overlay(
@@ -63,14 +67,22 @@ struct CartViewCell: View {
                 .stroke(Color.pink, lineWidth: 5)
         )
         .frame(height: 150)
-        
-        
+    }
+    
+    // MARK: - Function
+    func checkAlertAndBuy() {
+        if taskManager.multiplierInfo[0] as! Bool == true {
+            showingFailedAlert = true
+        } else if taskManager.multiplierInfo[0] as! Bool == false {
+            showingSuccessAlert = true
+            taskManager.multiplierInfo = [true, purchaseItem.multiplier]
+        }
     }
 }
 
 // MARK: - Preview
 struct CartViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CartViewCell(purchaseItem: purchaseItemArray[0])
+        ShopItemCell(purchaseItem: purchaseItemArray[0], taskManager: TaskManager())
     }
 }

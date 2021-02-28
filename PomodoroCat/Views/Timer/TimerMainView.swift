@@ -3,8 +3,7 @@ import SwiftUI
 struct TimerMainView: View {
     
     // MARK: - Variable
-    @StateObject var taskManager = TaskManager()
-    
+    @ObservedObject var taskManager:TaskManager
     
     // MARK: - View
     var body: some View {
@@ -25,6 +24,6 @@ struct TimerMainView: View {
 // MARK: - Preview
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerMainView()
+        TimerMainView(taskManager: TaskManager())
     }
 }

@@ -19,7 +19,7 @@ struct TimerView: View {
                         .fontWeight(.bold)
                         .font(.system(size: 45))
                     
-                    Text(taskManager.isWorking ? "Working" : "Relaxing")
+                    Text(taskManager.currentText)
                         .fontWeight(.light)
                         .font(.system(size: 30))
                     
@@ -31,28 +31,17 @@ struct TimerView: View {
                 
                 ZStack {
                     
-                    Circle() // BG Gray Circle
+                    // BG Gray Circle
+                    Circle()
                         .trim(from: 0, to: 1)
                         .stroke(Color.gray.opacity(0.3), style: StrokeStyle(lineWidth: screenWidth/10, lineCap: .round))
                     
-                    Circle() // Relax Circle
-                        .trim(from: 0, to: taskManager.task.relaxTo)
+                    // Active Timer Circle
+                    Circle()
+                        .trim(from: 0, to: taskManager.currentTo)
                         .stroke(Color.green, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
-                        .rotationEffect(.init(degrees: taskManager.task.relaxDegreeWithPomodoro))
                     
-                    Circle() // Pomodoro Circle
-                        .trim(from: 0, to: taskManager.task.pomodoroTo)
-                        .stroke(Color.pink, style: StrokeStyle(lineWidth: screenWidth/15, lineCap: .round))
-                        .rotation3DEffect(
-                            .degrees(180),
-                            axis: (x: 1, y: 1, z: 0)
-                        )
-                        .rotationEffect(.degrees(taskManager.task.pomodoroDegree), anchor: .center)
-                        .rotation3DEffect(
-                            .degrees(180),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                    
+                    // Button
                     Button(action: {
                         taskManager.timerStart.toggle()
                     }, label: {
@@ -72,7 +61,7 @@ struct TimerView: View {
             if self.taskManager.timerStart {
                 
                 withAnimation {
-                    taskManager.timerFirePerSecond()
+                    
                 }
                 
             }
@@ -81,7 +70,7 @@ struct TimerView: View {
         .onChange(of: self.taskManager.timerStart, perform: { _ in
             if self.taskManager.timerStart == false {
                 withAnimation {
-                    taskManager.resetTask()
+                    
                 }
             }
         })

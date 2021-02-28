@@ -1,10 +1,3 @@
-//
-//  GeniusView.swift
-//  PomodoroCat
-//
-//  Created by Shengyuan Lu on 2/27/21.
-//
-
 import SwiftUI
 
 struct GeniusView: View {
@@ -20,8 +13,7 @@ struct GeniusView: View {
                     .padding()
             }
         }
-        .statusBar(hidden: true)
-        .navigationBarTitle("Genius", displayMode: .inline)
+        .navigationBarTitle("Stanford Rejects", displayMode: .inline)
         // Hide the system back button
         .navigationBarBackButtonHidden(true)
         // Add your custom back button here

@@ -1,15 +1,11 @@
-//
-//  CartView.swift
-//  PomodoroCat
-//
-//  Created by Shengyuan Lu on 2/27/21.
-//
-
 import SwiftUI
 
-struct CartView: View {
+struct ShopView: View {
     
     // MARK: - Variable
+    @Environment(\.presentationMode) var presentationMode
+    
+    @ObservedObject var taskManager:TaskManager
     
     // MARK: - Body
     var body: some View {
@@ -17,7 +13,7 @@ struct CartView: View {
         
         ScrollView {
             ForEach(purchaseItemArray, id: \.self) { purchaseItem in
-                CartViewCell(purchaseItem: purchaseItem)
+                ShopItemCell(purchaseItem: purchaseItem, taskManager: taskManager)
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
             }
@@ -30,6 +26,6 @@ struct CartView: View {
 // MARK: - Preview
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView()
+        ShopView(taskManager: TaskManager())
     }
 }

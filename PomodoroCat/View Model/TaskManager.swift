@@ -3,76 +3,68 @@ import SwiftUI
 
 class TaskManager: ObservableObject {
     
-    @Published var task = Task(pomodoroSeconds: 25, relaxSeconds: 5, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
-    
     @Published var isWorking = true
+    
+    @Published var isOnLongRelax = false
     
     @Published var timerStart = false
     
-    @Published var completedNum = 0
+    @Published var completedSection = 0
     
-    @Published var pomodoroDonePlayed = false
+    @Published var multiplierInfo:[Any] = [false, 2]
+    
+    @Published var task = Task()
+    
+    @Published var currentTo:CGFloat = 1
+    
+    @Published var currentSecond:CGFloat = 1
+    
+    @Published var currentText:String = "Tap to Start"
     
     var audioPlayer = AudioPlayer()
     
-    func timerFirePerSecond() {
-
-        if task.pomodoroSeconds != 0 {
-            task.pomodoroSeconds -= 1
-            
-            task.pomodoroTo = CGFloat(task.pomodoroSeconds / (task.totalSeconds))
-            
-        } else if task.pomodoroSeconds == 0 && task.relaxSeconds != 0 {
-            
-            self.isWorking = false
-            
-            task.relaxSeconds -= 1
-            
-            task.relaxTo = CGFloat(task.relaxSeconds / (task.totalSeconds))
-            
-        } else if task.relaxSeconds == 0 {
-            self.resetTask()
-            
-            self.completedNum += 1
-        }
-        
-        checkIfPlayAudio()
-
-    }
-    
-    func checkIfPlayAudio() {
-        if task.pomodoroTo == 0 && !pomodoroDonePlayed {
-            self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
-            
-            pomodoroDonePlayed = true
-        }
-        
-        
-        if task.pomodoroTo == 0 && task.relaxTo == 0 {
-            
-            self.audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
-            
-        }
-    }
-    
-    func resetTask() {
+    func resetProject() {
         self.isWorking = true
         self.timerStart = false
-        self.task = Task(pomodoroSeconds: 25, relaxSeconds: 5, pomodoroDegree: 120, relaxDegreeWithPomodoro: -90)
+        self.completedSection = 0
+        
+        self.task = Task()
+    }
+    
+    
+    func timerFired() {
+        
+        while self.completedSection < task.numOfSections {
+            
+            
+            
+            
+        }
+        
     }
     
     func getCurrentNumMin() -> Int {
-        if task.pomodoroSeconds != 0 {
-            return Int(task.pomodoroSeconds)
+        if task.workSeconds != 0 {
+            return Int(task.workSeconds)
             
-        } else if task.pomodoroSeconds == 0 && task.relaxSeconds != 0 {
+        } else if task.workSeconds == 0 && task.shortRelaxSeconds != 0 {
             
-            return Int(task.relaxSeconds)
+            return Int(task.shortRelaxSeconds)
             
-        } else if task.relaxSeconds == 0 {
+        } else if task.shortRelaxSeconds == 0 {
             return 0
         }
         
         return 0
     }
+    
+    func addCatCoin() -> Int {
+        if self.multiplierInfo[0] as! Bool == true {
+            return 10 * (self.multiplierInfo[1] as! Int)
+        } else {
+            return 10
+        }
+    }
+    
+    
 }
