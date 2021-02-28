@@ -27,6 +27,8 @@
 		F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4C25EAC5F600DD7B55 /* Genius.swift */; };
 		F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB5225EACDE700DD7B55 /* GeniusView.swift */; };
 		F4AF1DF525EB70C5002B0891 /* buy.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF425EB70C5002B0891 /* buy.wav */; };
+		F4AF1DF825EB7537002B0891 /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF725EB7537002B0891 /* fail.wav */; };
+		F4AF1E0225EB78FF002B0891 /* TimerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1E0125EB78FF002B0891 /* TimerStats.swift */; };
 		F4CA635125EADD64001FBA2C /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635025EADD64001FBA2C /* ShopView.swift */; };
 		F4CA635525EAE01D001FBA2C /* ShopItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635425EAE01D001FBA2C /* ShopItemCell.swift */; };
 		F4CA635A25EAE37E001FBA2C /* PurchaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */; };
@@ -64,6 +66,8 @@
 		F467CB4C25EAC5F600DD7B55 /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
 		F467CB5225EACDE700DD7B55 /* GeniusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusView.swift; sourceTree = "<group>"; };
 		F4AF1DF425EB70C5002B0891 /* buy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buy.wav; sourceTree = "<group>"; };
+		F4AF1DF725EB7537002B0891 /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
+		F4AF1E0125EB78FF002B0891 /* TimerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStats.swift; sourceTree = "<group>"; };
 		F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCat.entitlements; sourceTree = "<group>"; };
 		F4CA635025EADD64001FBA2C /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		F4CA635425EAE01D001FBA2C /* ShopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCell.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		F43E830125EA1CD100885499 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				F4AF1DF725EB7537002B0891 /* fail.wav */,
 				F4AF1DF425EB70C5002B0891 /* buy.wav */,
 				F43E830325EA1CF400885499 /* clickback.wav */,
 				F43E830425EA1CF400885499 /* clickto.wav */,
@@ -244,6 +249,7 @@
 				F4E1CC8325E9AB540026EB32 /* TimerMainView.swift */,
 				F467CB2D25EA3F3900DD7B55 /* TimerTitleView.swift */,
 				F4E1CC9F25E9AE660026EB32 /* TimerView.swift */,
+				F4AF1E0125EB78FF002B0891 /* TimerStats.swift */,
 				F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */,
 			);
 			path = Timer;
@@ -320,6 +326,7 @@
 				F4AF1DF525EB70C5002B0891 /* buy.wav in Resources */,
 				F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */,
 				F43E830525EA1CF400885499 /* done.wav in Resources */,
+				F4AF1DF825EB7537002B0891 /* fail.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
 			);
@@ -347,6 +354,7 @@
 				F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
 				F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */,
+				F4AF1E0225EB78FF002B0891 /* TimerStats.swift in Sources */,
 				F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */,
 				F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */,
 				F467CB4225EAC2B100DD7B55 /* SettingsRowTypeLink.swift in Sources */,

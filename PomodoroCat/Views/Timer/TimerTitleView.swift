@@ -13,30 +13,21 @@ struct TimerTitleView: View {
     
     @AppStorage("catCoin") private var catCoin = 0
     
+    let cornerRadius:CGFloat = 10
+    
     // MARK: - View
     var body: some View {
         
-        GeometryReader(content: { geometry in
+        VStack(alignment: .leading) {
             
-            VStack(alignment: .leading) {
-                
-                Text("Your Progress (\(taskManager.completedSection)/\(taskManager.task.numOfSections))")
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.primary)
-                
-                Text("Your CatCoin: \(catCoin)")
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.primary)
-                
-                
-            }
-            .frame(height: 10, alignment: .leading)
+            Text("Your CatCoin: \(catCoin)")
+                .font(.body)
+                .fontWeight(.bold)
+                .foregroundColor(Color.primary)
             
             
-        })
-        
+        }
+        .frame(height: 150)
     }
 }
 

@@ -9,11 +9,22 @@ struct TimerMainView: View {
     var body: some View {
         
         ScrollView {
-            TimerTitleView(taskManager: taskManager)
-                .padding()
             
-            TimerView(taskManager: taskManager)
-                .padding(40)
+            VStack {
+                TimerTitleView(taskManager: taskManager)
+                    .padding()
+                
+                TimerView(taskManager: taskManager)
+                    .padding(40)
+                
+                Text("Section Progress: \(taskManager.completedSection)/\(taskManager.task.numOfSections)")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.primary)
+                    .padding(.vertical, 20)
+                
+            }
+
             
             // ButtonSetView(taskManager: taskManager)
         }

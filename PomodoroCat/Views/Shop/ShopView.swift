@@ -3,9 +3,11 @@ import SwiftUI
 struct ShopView: View {
     
     // MARK: - Variable
+    @ObservedObject var taskManager:TaskManager
+    
     @Environment(\.presentationMode) var presentationMode
     
-    @ObservedObject var taskManager:TaskManager
+    @State var audioPlayer = AudioPlayer()
     
     // MARK: - Body
     var body: some View {
@@ -19,7 +21,22 @@ struct ShopView: View {
             }
             
         }
+        .navigationBarItems(
+            trailing:
+                Button(action: {
+                    closeButtonTapped()
+                }, label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title)
+                        .foregroundColor(.tomato)
+                }))
         
+    }
+    
+    // MARK: - Functions
+    func closeButtonTapped() {
+        self.audioPlayer.startPlayBack(audioUrl: AudioURL.toggleOff!)
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

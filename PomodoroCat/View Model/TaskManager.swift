@@ -39,7 +39,7 @@ class TaskManager: ObservableObject {
                 
                 // Working session initialization
                 if task.workSeconds == task.taskStorage[0] {
-                    currentText = "Focus"
+                    currentText = "Work"
                     currentTo = 1
                     currentColor = Color.pink
                     currentMinute = task.workSeconds
@@ -61,7 +61,7 @@ class TaskManager: ObservableObject {
                 
                 // Relaxing session initialization
                 if task.shortRelaxSeconds == task.taskStorage[1] {
-                    currentText = "Short Relax"
+                    currentText = "Short Break"
                     currentTo = 1
                     currentColor = Color.green
                     currentMinute = task.shortRelaxSeconds
@@ -84,7 +84,7 @@ class TaskManager: ObservableObject {
                 task.workSeconds = task.taskStorage[0]
                 task.shortRelaxSeconds = task.taskStorage[1]
                 currentColor = Color.pink
-                currentText = "Focus"
+                currentText = "Work"
                 
             }
             
@@ -92,7 +92,7 @@ class TaskManager: ObservableObject {
         } else if completedSection == task.taskStorage[3] && task.longRelaxSeconds != 0 {
             // Long relaxing initialization
             if task.longRelaxSeconds == task.taskStorage[2] {
-                currentText = "Long Relax"
+                currentText = "Long Break"
                 currentTo = 1
                 currentColor = Color.blue
                 currentMinute = task.longRelaxSeconds

@@ -68,11 +68,13 @@ struct ShopItemCell: View {
                 .stroke(Color.pink, lineWidth: 5)
         )
         .frame(height: 150)
+
     }
     
     // MARK: - Function
     func checkAlertAndBuy() {
         if taskManager.multiplierInfo[0] as! Bool == true {
+            audioPlayer.startPlayBack(audioUrl: AudioURL.buyFail!)
             showingFailedAlert = true
         } else if taskManager.multiplierInfo[0] as! Bool == false {
             audioPlayer.startPlayBack(audioUrl: AudioURL.buy!)
@@ -80,6 +82,7 @@ struct ShopItemCell: View {
             taskManager.multiplierInfo = [true, purchaseItem.booster]
         }
     }
+    
 }
 
 // MARK: - Preview

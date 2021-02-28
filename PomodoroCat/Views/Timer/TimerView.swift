@@ -22,9 +22,11 @@ struct TimerView: View {
                 
                 VStack(spacing: 10) {
                     
-                    Text("\(taskManager.currentMinute) min")
-                        .fontWeight(.bold)
-                        .font(.system(size: 45))
+                    if taskManager.timerStart {
+                        Text("\(taskManager.currentMinute) min")
+                            .fontWeight(.bold)
+                            .font(.system(size: 45))
+                    }
                     
                     Text(taskManager.currentText)
                         .fontWeight(.light)
@@ -63,6 +65,7 @@ struct TimerView: View {
                     
                 }
                 .frame(width: screenWidth/1.5, height: screenWidth/1.5, alignment: .center)
+                
                 
             }
             
