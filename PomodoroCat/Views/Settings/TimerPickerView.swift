@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimerPicker: View {
+struct TimerPickerView: View {
     
     // MARK: - Variable
     @Binding var bindingNum:Int
@@ -34,7 +34,7 @@ struct TimerPicker: View {
         // Hide the system back button
         .navigationBarBackButtonHidden(true)
         // Add your custom back button here
-        .navigationBarItems(leading:
+        .navigationBarItems(trailing:
                                 Button(action: {
                                     self.presentationMode.wrappedValue.dismiss()
                                 }) {

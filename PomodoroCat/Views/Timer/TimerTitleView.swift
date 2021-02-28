@@ -11,6 +11,8 @@ struct TimerTitleView: View {
     // MARK: - Variable
     @ObservedObject var taskManager:TaskManager
     
+    @AppStorage("catCoin") private var catCoin = 0
+    
     // MARK: - View
     var body: some View {
         
@@ -20,12 +22,14 @@ struct TimerTitleView: View {
                 
                 Text("Your Progress (\(taskManager.completedSection)/\(taskManager.task.numOfSections))")
                     .font(.body)
-                    .fontWeight(.regular)
+                    .fontWeight(.bold)
                     .foregroundColor(Color.primary)
                 
-                HStack {
-                    
-                }
+                Text("Your CatCoin: \(catCoin)")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.primary)
+                
                 
             }
             .frame(height: 10, alignment: .leading)

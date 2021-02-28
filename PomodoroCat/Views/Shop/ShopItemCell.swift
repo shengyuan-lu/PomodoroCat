@@ -11,6 +11,8 @@ struct ShopItemCell: View {
     
     @ObservedObject var taskManager:TaskManager
     
+    @State var audioPlayer = AudioPlayer()
+    
     // MARK: - Body
     var body: some View {
         
@@ -31,7 +33,7 @@ struct ShopItemCell: View {
                         .lineLimit(nil)
                 }
                 .alert(isPresented: $showingSuccessAlert) {
-                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(purchaseItem.multiplier)X multiplier for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
+                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(purchaseItem.booster)X booster for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
                 }
                 
                 Spacer()
@@ -55,7 +57,7 @@ struct ShopItemCell: View {
                         
                     })
                     .alert(isPresented: $showingFailedAlert) {
-                        Alert(title: Text("Purchase Failed"), message: Text("There is already a multiplier active"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("Purchase Failed"), message: Text("There is already a booster active"), dismissButton: .default(Text("Got it!")))
                     }
                 }
             }
@@ -73,8 +75,9 @@ struct ShopItemCell: View {
         if taskManager.multiplierInfo[0] as! Bool == true {
             showingFailedAlert = true
         } else if taskManager.multiplierInfo[0] as! Bool == false {
+            audioPlayer.startPlayBack(audioUrl: AudioURL.buy!)
             showingSuccessAlert = true
-            taskManager.multiplierInfo = [true, purchaseItem.multiplier]
+            taskManager.multiplierInfo = [true, purchaseItem.booster]
         }
     }
 }

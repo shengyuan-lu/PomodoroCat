@@ -12,6 +12,8 @@ struct TimerView: View {
     @AppStorage("longRest") private var longRest = 15
     @AppStorage("numOfSection") private var numOfSection = 4
     
+    @State var audioPlayer = AudioPlayer()
+    
     // MARK: - View
     var body: some View {
         
@@ -51,6 +53,7 @@ struct TimerView: View {
                     
                     // Button
                     Button(action: {
+                        self.audioPlayer.startPlayBack(audioUrl: AudioURL.toggleOn!)
                         taskManager.timerStart.toggle()
                     }, label: {
                         Circle() // BG Gray Circle

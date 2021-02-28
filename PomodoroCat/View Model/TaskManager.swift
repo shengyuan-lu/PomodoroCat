@@ -49,9 +49,10 @@ class TaskManager: ObservableObject {
                 currentMinute = task.workSeconds
                 self.currentTo -= CGFloat( 1 / Double(task.taskStorage[0]))
                 
-                // Play done sound
+                // Working session ends, play done sound and add catcoin
                 if task.workSeconds == 0 {
                     audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                    self.addCatCoin(amount: 20)
                 }
                 
                 
@@ -70,9 +71,10 @@ class TaskManager: ObservableObject {
                 currentMinute = task.shortRelaxSeconds
                 self.currentTo -= CGFloat( 1 / Double(task.taskStorage[1]))
                 
-                // Play done sound
+                // Short relax session ends, play done sound and add catcoin
                 if task.shortRelaxSeconds == 0 {
                     audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                    self.addCatCoin(amount: 5)
                 }
                 
             } else if task.shortRelaxSeconds == 0 {
@@ -100,9 +102,10 @@ class TaskManager: ObservableObject {
             currentMinute = task.longRelaxSeconds
             self.currentTo -= CGFloat( 1 / Double(task.taskStorage[2]))
             
-            // Play done sound
+            // Long relax ends, play done sound and add coin
             if task.longRelaxSeconds == 0 {
                 audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
+                self.addCatCoin(amount: 10)
             }
             
             
@@ -124,13 +127,13 @@ class TaskManager: ObservableObject {
         multiplierInfo = [false, 2]
     }
     
-    func addCatCoin() -> Int {
+    func addCatCoin(amount:Int) {
         if self.multiplierInfo[0] as! Bool == true {
-            return 10 * (self.multiplierInfo[1] as! Int)
+            self.catCoin += (amount * (self.multiplierInfo[1] as! Int))
+            
         } else {
-            return 10
+            self.catCoin += amount
         }
     }
-    
     
 }

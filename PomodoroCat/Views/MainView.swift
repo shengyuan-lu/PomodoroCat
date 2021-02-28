@@ -41,7 +41,7 @@ struct MainView: View {
                         NavigationView {
                             ShopView(taskManager: taskManager)
                                 .preferredColorScheme(determineTheme(themeIndex))
-                                .navigationBarTitle(Text("Purchase Multiplier"))
+                                .navigationBarTitle(Text("Purchase Booster"))
                                 .navigationBarTitleDisplayMode(.inline)
                         }
                         
@@ -61,6 +61,9 @@ struct MainView: View {
             taskManager.currentMinute = taskManager.task.workSeconds
             
             taskManager.catCoin = catCoin
+        })
+        .onChange(of: taskManager.catCoin, perform: { value in
+            self.catCoin = taskManager.catCoin
         })
         
         

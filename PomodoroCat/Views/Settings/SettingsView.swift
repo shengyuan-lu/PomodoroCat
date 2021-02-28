@@ -27,31 +27,31 @@ struct SettingsView: View {
                 Section(header: Text("Timer")) {
                     
                     NavigationLink(
-                        destination: TimerPicker(bindingNum: $work, selectionIndex: (work - 10), lowerBound: 10, upperBound: 60, unit: "Minutes"),
+                        destination: TimerPickerView(bindingNum: $work, selectionIndex: (work - 10), lowerBound: 10, upperBound: 60, unit: "Minutes"),
                         label: {
                             SettingsRowTypeAbout(iconName: "hammer.fill", iconColor: Color.tomato, firstText: "Work", secondText: "\(work) Minutes")
-                                .padding(.vertical)
+                                .padding(.vertical, 3)
                         }).id(UUID())
                     
                     NavigationLink(
-                        destination: TimerPicker(bindingNum: $shortRest, selectionIndex: (shortRest - 5), lowerBound: 5, upperBound: 30, unit: "Minutes"),
+                        destination: TimerPickerView(bindingNum: $shortRest, selectionIndex: (shortRest - 5), lowerBound: 5, upperBound: 30, unit: "Minutes"),
                         label: {
                             SettingsRowTypeAbout(iconName: "die.face.3.fill", iconColor: Color.tomato, firstText: "Short Rest", secondText: "\(shortRest) Minutes")
-                                .padding(.vertical)
+                                .padding(.vertical, 3)
                         }).id(UUID())
                     
                     NavigationLink(
-                        destination: TimerPicker(bindingNum: $longRest, selectionIndex: (longRest - 15), lowerBound: 15, upperBound: 90, unit: "Minutes"),
+                        destination: TimerPickerView(bindingNum: $longRest, selectionIndex: (longRest - 15), lowerBound: 15, upperBound: 90, unit: "Minutes"),
                         label: {
                             SettingsRowTypeAbout(iconName: "bed.double.fill", iconColor: Color.tomato, firstText: "Long Rest", secondText: "\(longRest) Minutes")
-                                .padding(.vertical)
+                                .padding(.vertical, 3)
                         }).id(UUID())
                     
                     NavigationLink(
-                        destination: TimerPicker(bindingNum: $numOfSection, selectionIndex: (numOfSection - 2), lowerBound: 2, upperBound: 10, unit: "Sections"),
+                        destination: TimerPickerView(bindingNum: $numOfSection, selectionIndex: (numOfSection - 2), lowerBound: 2, upperBound: 10, unit: "Sections"),
                         label: {
                             SettingsRowTypeAbout(iconName: "rectangle.stack", iconColor: Color.tomato, firstText: "Sections", secondText:"\(numOfSection)")
-                                .padding(.vertical)
+                                .padding(.vertical, 3)
                         }).id(UUID())
                     
                 }
@@ -64,19 +64,9 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
+                    .id(UUID())
                     
                 }
-                
-                // About Section
-                Section(header: Text("About")) {
-                    SettingsRowTypeAbout(iconName: "apps.iphone", iconColor: Color.blue, firstText: "Application", secondText: "PomodoroCat")
-                    SettingsRowTypeAbout(iconName: "checkmark.circle.fill", iconColor: Color.green, firstText: "Compatibility", secondText: "iPhone")
-                    SettingsRowTypeAbout(iconName: "swift", iconColor: Color.orange, firstText: "Programming Language", secondText: "Swift")
-                    SettingsRowTypeAbout(iconName: "flag", iconColor: Color.red, firstText: "App Version", secondText: "\(AppVersion.version!)")
-                }
-                .padding(.vertical, 3)
-                
-
                 
                 // Developer Section
                 Section(header: Text("Developers")) {
@@ -85,7 +75,7 @@ struct SettingsView: View {
                         destination: GeniusView(),
                         label: {
                             SettingsRowTypeAbout(iconName: "person.fill", iconColor: Color.pink, firstText: "Developers", secondText: "Stanford Rejects")
-                                .padding(.vertical)
+                                .padding(.vertical, 3)
                         }).id(UUID())
                 }
                 
@@ -93,6 +83,15 @@ struct SettingsView: View {
                 Section(header: Text("Links")) {
                     SettingsRowTypeLink(iconName: "globe", iconColor: Color.purple, text: "Developer Website", link: "https://www.google.com")
                     SettingsRowTypeLink(iconName: "hand.raised.fill", iconColor: Color.gray, text: "Privacy Policy", link: "https://www.google.com")
+                }
+                .padding(.vertical, 3)
+                
+                // About Section
+                Section(header: Text("About")) {
+                    SettingsRowTypeAbout(iconName: "apps.iphone", iconColor: Color.blue, firstText: "Application", secondText: "PomodoroCat")
+                    SettingsRowTypeAbout(iconName: "checkmark.circle.fill", iconColor: Color.green, firstText: "Compatibility", secondText: "iPhone")
+                    SettingsRowTypeAbout(iconName: "swift", iconColor: Color.orange, firstText: "Programming Language", secondText: "Swift")
+                    SettingsRowTypeAbout(iconName: "flag", iconColor: Color.red, firstText: "App Version", secondText: "\(AppVersion.version!)")
                 }
                 .padding(.vertical, 3)
 
