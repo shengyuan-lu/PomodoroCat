@@ -11,9 +11,31 @@ struct CatMainView: View {
     
     @AppStorage("catCoin") private var catCoin = 0
     
+    @State private var offset = CGSize.zero
+    
     var body: some View {
         
-        Text("Cat goes here")
+        GeometryReader { geometry in
+            ZStack {
+                Image("catbg")
+                    .resizable()
+                    .aspectRatio(geometry.size, contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                
+                Image("cat")
+                    .resizable()
+                    .scaledToFit()
+                    .offset(offset)
+                    .frame(width: 200)
+                    .gesture(
+                        DragGesture()
+                            .onChanged { gesture in
+                                self.offset = gesture.translation
+                            }
+                    )
+                
+            }
+        }
         
     }
 }

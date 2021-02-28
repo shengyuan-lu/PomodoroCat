@@ -15,6 +15,8 @@ struct MainView: View {
     
     @StateObject var taskManager:TaskManager = TaskManager()
     
+    @State private var selectionIndex = 0
+    
     // MARK: - View
     var body: some View {
         
@@ -25,9 +27,13 @@ struct MainView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
                 
-                TabView {
+                TabView(selection: $selectionIndex) {
                     TimerMainView(taskManager: taskManager)
+                        .tag(0)
+                    
                     CatMainView()
+                        .tag(1)
+
                 }
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -59,9 +65,14 @@ struct MainView: View {
                                 Image(systemName: "gearshape.fill")
                                     .font(.title2)
                             }))
+                .onChange(of: selectionIndex, perform: { value in
+                    self.taskManager.resetTimer()
+                })
+  
+
             }
             
-
+            
         }
         .onAppear(perform: {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
