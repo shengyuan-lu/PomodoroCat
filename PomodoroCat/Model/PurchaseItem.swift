@@ -1,6 +1,6 @@
 import Foundation
 
-struct PurchaseItem:Hashable {
+struct PurchaseItem: Hashable {
     
     let name:String
     

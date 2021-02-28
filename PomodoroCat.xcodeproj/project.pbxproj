@@ -14,6 +14,8 @@
 		F43E830525EA1CF400885499 /* done.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830225EA1CF400885499 /* done.wav */; };
 		F43E830625EA1CF400885499 /* clickback.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830325EA1CF400885499 /* clickback.wav */; };
 		F43E830725EA1CF400885499 /* clickto.wav in Resources */ = {isa = PBXBuildFile; fileRef = F43E830425EA1CF400885499 /* clickto.wav */; };
+		F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */; };
+		F44F5CF725EBB06C008FD5EA /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F5CF625EBB06C008FD5EA /* CatItem.swift */; };
 		F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */; };
 		F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */; };
 		F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */; };
@@ -46,6 +48,9 @@
 		F4E1CCAB25E9C6370026EB32 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */; };
 		F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */; };
 		F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */; };
+		F4FDA14325EBC46E00ED0163 /* CatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA14225EBC46E00ED0163 /* CatManager.swift */; };
+		F4FDA14725EBC4FE00ED0163 /* CatShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA14625EBC4FE00ED0163 /* CatShopView.swift */; };
+		F4FDA14A25EBC50D00ED0163 /* CatShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDA14925EBC50D00ED0163 /* CatShopCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,8 @@
 		F43E830225EA1CF400885499 /* done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = done.wav; sourceTree = "<group>"; };
 		F43E830325EA1CF400885499 /* clickback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickback.wav; sourceTree = "<group>"; };
 		F43E830425EA1CF400885499 /* clickto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clickto.wav; sourceTree = "<group>"; };
+		F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "cat-sound.wav"; sourceTree = "<group>"; };
+		F44F5CF625EBB06C008FD5EA /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioURL.swift; sourceTree = "<group>"; };
 		F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
 		F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -93,6 +100,9 @@
 		F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		F4E1CCAF25E9E9CC0026EB32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatMainView.swift; sourceTree = "<group>"; };
+		F4FDA14225EBC46E00ED0163 /* CatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatManager.swift; sourceTree = "<group>"; };
+		F4FDA14625EBC4FE00ED0163 /* CatShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatShopView.swift; sourceTree = "<group>"; };
+		F4FDA14925EBC50D00ED0163 /* CatShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatShopCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 		F43E830125EA1CD100885499 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */,
 				F4AF1DF725EB7537002B0891 /* fail.wav */,
 				F4AF1DF425EB70C5002B0891 /* buy.wav */,
 				F43E830325EA1CF400885499 /* clickback.wav */,
@@ -150,13 +161,13 @@
 			path = Creator;
 			sourceTree = "<group>";
 		};
-		F4CA634F25EADD05001FBA2C /* Shop */ = {
+		F4CA634F25EADD05001FBA2C /* IAP Purchase */ = {
 			isa = PBXGroup;
 			children = (
 				F4CA635025EADD64001FBA2C /* ShopView.swift */,
 				F4CA635425EAE01D001FBA2C /* ShopItemCell.swift */,
 			);
-			path = Shop;
+			path = "IAP Purchase";
 			sourceTree = "<group>";
 		};
 		F4E1CC7525E9AB540026EB32 = {
@@ -213,8 +224,8 @@
 				F4E1CCB825E9EC210026EB32 /* Timer */,
 				F4E1CCB925E9EC290026EB32 /* Cat */,
 				F467CB3125EABE4A00DD7B55 /* Settings */,
-				F4CA634F25EADD05001FBA2C /* Shop */,
 				262397B925EB9FD500B02F92 /* LoginMainView.swift */,
+				F4CA634F25EADD05001FBA2C /* IAP Purchase */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 				F43E82FE25EA1C9400885499 /* AudioPlayer.swift */,
 				F467CB4C25EAC5F600DD7B55 /* Genius.swift */,
 				F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */,
+				F44F5CF625EBB06C008FD5EA /* CatItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CCAA25E9C6370026EB32 /* TaskManager.swift */,
+				F4FDA14225EBC46E00ED0163 /* CatManager.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */,
+				F4FDA14125EBC44400ED0163 /* Cat Shop */,
 			);
 			path = Cat;
 			sourceTree = "<group>";
@@ -291,6 +305,13 @@
 				2C300A4B57BB9CBADB4E9566 /* Pods-PomodoroCat.release.xcconfig */,
 			);
 			path = Pods;
+		F4FDA14125EBC44400ED0163 /* Cat Shop */ = {
+			isa = PBXGroup;
+			children = (
+				F4FDA14625EBC4FE00ED0163 /* CatShopView.swift */,
+				F4FDA14925EBC50D00ED0163 /* CatShopCell.swift */,
+			);
+			path = "Cat Shop";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +382,7 @@
 				F4AF1DF825EB7537002B0891 /* fail.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
+				F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,14 +447,17 @@
 				F4E1CCA625E9B77D0026EB32 /* Task.swift in Sources */,
 				F467CB4625EAC30C00DD7B55 /* Helper.swift in Sources */,
 				F4CA635525EAE01D001FBA2C /* ShopItemCell.swift in Sources */,
+				F44F5CF725EBB06C008FD5EA /* CatItem.swift in Sources */,
 				F4DDB77125EB8A4300D34C9B /* TimerSettingsRow.swift in Sources */,
 				F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */,
 				F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */,
 				F4E1CCBB25E9EC430026EB32 /* CatMainView.swift in Sources */,
+				F4FDA14725EBC4FE00ED0163 /* CatShopView.swift in Sources */,
 				F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */,
 				F4AF1E0225EB78FF002B0891 /* TimerStats.swift in Sources */,
 				F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */,
 				F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */,
+				F4FDA14325EBC46E00ED0163 /* CatManager.swift in Sources */,
 				F467CB4225EAC2B100DD7B55 /* SettingsRowTypeLink.swift in Sources */,
 				F4E1CCB025E9E9CC0026EB32 /* MainView.swift in Sources */,
 				F467CB3B25EAC0C400DD7B55 /* SettingsRowTypeAbout.swift in Sources */,
@@ -441,6 +466,7 @@
 				F4CA635A25EAE37E001FBA2C /* PurchaseItem.swift in Sources */,
 				F438966F25EAF8F2003C82DD /* TimerPickerView.swift in Sources */,
 				F467CB3825EAC09600DD7B55 /* SettingsIcon.swift in Sources */,
+				F4FDA14A25EBC50D00ED0163 /* CatShopCell.swift in Sources */,
 				F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

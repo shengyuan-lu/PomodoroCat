@@ -65,7 +65,7 @@ struct ShopItemCell: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.pink, lineWidth: 5)
+                .stroke(Color.yellow, lineWidth: 5)
         )
         .frame(height: 150)
 
