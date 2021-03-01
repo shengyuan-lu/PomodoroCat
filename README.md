@@ -30,3 +30,6 @@ We learnt about the implementation of SwiftUI framework as well as backend suppo
 
 ## What's next for PomodoroCat
 For our next step, we plan to implement a more dynamic framework of data transfer between our application and the users using Firebase. Features such as live transactions can be implemented in the near future. Furthermore, we also plan to come up with more decorations customization options for the cats’ habitat. 
+
+## Video Walkthrough
+<img src='https://i.imgur.com/bIaYyMT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
