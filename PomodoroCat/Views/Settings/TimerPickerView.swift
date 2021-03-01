@@ -1,10 +1,3 @@
-//
-//  TimerPicker.swift
-//  PomodoroCat
-//
-//  Created by Shengyuan Lu on 2/27/21.
-//
-
 import SwiftUI
 
 struct TimerPickerView: View {

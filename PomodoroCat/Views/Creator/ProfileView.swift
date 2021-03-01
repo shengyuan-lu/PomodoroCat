@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ProfileView: View {
+    
     // MARK: - Variable
     let cornerRadius:CGFloat = 10
     let profileHeight:CGFloat = 120

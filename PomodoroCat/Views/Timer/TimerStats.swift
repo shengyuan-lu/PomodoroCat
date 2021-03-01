@@ -2,8 +2,10 @@ import SwiftUI
 
 struct TimerStats: View {
     
+    // MARK: - Variable
     @ObservedObject var taskManager:TaskManager
     
+    // MARK: - View
     var body: some View {
         
         VStack(alignment: .leading, spacing: 20) {
@@ -49,6 +51,7 @@ struct TimerStats: View {
     }
 }
 
+// MARK: - Preview
 struct TimerStats_Previews: PreviewProvider {
     static var previews: some View {
         TimerStats(taskManager: TaskManager())

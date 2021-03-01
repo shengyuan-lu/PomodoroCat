@@ -28,8 +28,8 @@
 		F467CB4925EAC5B500DD7B55 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4825EAC5B500DD7B55 /* ProfileView.swift */; };
 		F467CB4D25EAC5F600DD7B55 /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB4C25EAC5F600DD7B55 /* Genius.swift */; };
 		F467CB5325EACDE700DD7B55 /* GeniusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB5225EACDE700DD7B55 /* GeniusView.swift */; };
-		F4AF1DF525EB70C5002B0891 /* buy.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF425EB70C5002B0891 /* buy.wav */; };
-		F4AF1DF825EB7537002B0891 /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF725EB7537002B0891 /* fail.wav */; };
+		F4AF1DF525EB70C5002B0891 /* buy-success.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF425EB70C5002B0891 /* buy-success.wav */; };
+		F4AF1DF825EB7537002B0891 /* buy-fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4AF1DF725EB7537002B0891 /* buy-fail.wav */; };
 		F4AF1E0225EB78FF002B0891 /* TimerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1E0125EB78FF002B0891 /* TimerStats.swift */; };
 		F4CA635125EADD64001FBA2C /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635025EADD64001FBA2C /* ShopView.swift */; };
 		F4CA635525EAE01D001FBA2C /* ShopItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA635425EAE01D001FBA2C /* ShopItemCell.swift */; };
@@ -73,8 +73,8 @@
 		F467CB4825EAC5B500DD7B55 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F467CB4C25EAC5F600DD7B55 /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
 		F467CB5225EACDE700DD7B55 /* GeniusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusView.swift; sourceTree = "<group>"; };
-		F4AF1DF425EB70C5002B0891 /* buy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buy.wav; sourceTree = "<group>"; };
-		F4AF1DF725EB7537002B0891 /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
+		F4AF1DF425EB70C5002B0891 /* buy-success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "buy-success.wav"; sourceTree = "<group>"; };
+		F4AF1DF725EB7537002B0891 /* buy-fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "buy-fail.wav"; sourceTree = "<group>"; };
 		F4AF1E0125EB78FF002B0891 /* TimerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStats.swift; sourceTree = "<group>"; };
 		F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCat.entitlements; sourceTree = "<group>"; };
 		F4CA635025EADD64001FBA2C /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				F44F5CF225EBAE4C008FD5EA /* cat-sound.wav */,
-				F4AF1DF725EB7537002B0891 /* fail.wav */,
-				F4AF1DF425EB70C5002B0891 /* buy.wav */,
+				F4AF1DF725EB7537002B0891 /* buy-fail.wav */,
+				F4AF1DF425EB70C5002B0891 /* buy-success.wav */,
 				F43E830325EA1CF400885499 /* clickback.wav */,
 				F43E830425EA1CF400885499 /* clickto.wav */,
 				F43E830225EA1CF400885499 /* done.wav */,
@@ -132,7 +132,6 @@
 				F4DDB77025EB8A4300D34C9B /* TimerSettingsRow.swift */,
 				F467CB4125EAC2B100DD7B55 /* SettingsRowTypeLink.swift */,
 				F438966E25EAF8F2003C82DD /* TimerPickerView.swift */,
-				F467CB5525EACDF200DD7B55 /* Creator */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -179,8 +178,8 @@
 				F4E1CC9125E9AB640026EB32 /* Views */,
 				F4E1CC9425E9AB9A0026EB32 /* View Model */,
 				F4E1CC9325E9AB840026EB32 /* Model */,
-				F4E1CC9625E9ABA80026EB32 /* Extra */,
 				F4E1CC9525E9ABA00026EB32 /* Extension */,
+				F4E1CC9625E9ABA80026EB32 /* Extra */,
 				F43E830125EA1CD100885499 /* Sound */,
 				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
@@ -207,6 +206,7 @@
 				F4E1CCB825E9EC210026EB32 /* Timer */,
 				F4E1CCB925E9EC290026EB32 /* Cat */,
 				F467CB3125EABE4A00DD7B55 /* Settings */,
+				F467CB5525EACDF200DD7B55 /* Creator */,
 				F4CA634F25EADD05001FBA2C /* IAP Purchase */,
 			);
 			path = Views;
@@ -275,18 +275,10 @@
 			isa = PBXGroup;
 			children = (
 				F4E1CCBA25E9EC430026EB32 /* CatMainView.swift */,
-				F4FDA14125EBC44400ED0163 /* Cat Shop */,
-			);
-			path = Cat;
-			sourceTree = "<group>";
-		};
-		F4FDA14125EBC44400ED0163 /* Cat Shop */ = {
-			isa = PBXGroup;
-			children = (
 				F4FDA14625EBC4FE00ED0163 /* CatShopView.swift */,
 				F4FDA14925EBC50D00ED0163 /* CatShopCell.swift */,
 			);
-			path = "Cat Shop";
+			path = Cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,10 +341,10 @@
 				F43E830625EA1CF400885499 /* clickback.wav in Resources */,
 				F4E1CC9A25E9ABD90026EB32 /* Launch Screen.storyboard in Resources */,
 				F43E830725EA1CF400885499 /* clickto.wav in Resources */,
-				F4AF1DF525EB70C5002B0891 /* buy.wav in Resources */,
+				F4AF1DF525EB70C5002B0891 /* buy-success.wav in Resources */,
 				F4E1CC8925E9AB560026EB32 /* Preview Assets.xcassets in Resources */,
 				F43E830525EA1CF400885499 /* done.wav in Resources */,
-				F4AF1DF825EB7537002B0891 /* fail.wav in Resources */,
+				F4AF1DF825EB7537002B0891 /* buy-fail.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
 				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
 				F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */,

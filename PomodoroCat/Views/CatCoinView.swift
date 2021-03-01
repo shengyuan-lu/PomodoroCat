@@ -1,13 +1,7 @@
-//
-//  TimerTitleView.swift
-//  PomodoroCat
-//
-//  Created by Shengyuan Lu on 2/27/21.
-//
-
 import SwiftUI
 
 struct CatCoinView: View {
+    
     // MARK: - Variable
     @ObservedObject var taskManager:TaskManager
     

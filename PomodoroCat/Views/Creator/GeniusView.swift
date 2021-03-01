@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct GeniusView: View {
+    
     // MARK: - Variable
     @Environment(\.presentationMode) var presentationMode
     
