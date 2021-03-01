@@ -3,7 +3,7 @@ import SwiftUI
 struct TimerView: View {
     
     // MARK: - Variable
-    @State private var timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @ObservedObject var taskManager:TaskManager
     

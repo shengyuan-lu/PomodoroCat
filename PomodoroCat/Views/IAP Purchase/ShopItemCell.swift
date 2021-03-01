@@ -33,7 +33,7 @@ struct ShopItemCell: View {
                         .lineLimit(nil)
                 }
                 .alert(isPresented: $showingSuccessAlert) {
-                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(purchaseItem.booster)X booster for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it!")))
+                    Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(purchaseItem.booster)X booster for $\(purchaseItem.price)"), dismissButton: .default(Text("Got it")))
                 }
                 
                 Spacer()
@@ -57,7 +57,7 @@ struct ShopItemCell: View {
                         
                     })
                     .alert(isPresented: $showingFailedAlert) {
-                        Alert(title: Text("Purchase Failed"), message: Text("There is already a booster active"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("Purchase Failed"), message: Text("There is already a booster active"), dismissButton: .default(Text("Got it")))
                     }
                 }
             }
