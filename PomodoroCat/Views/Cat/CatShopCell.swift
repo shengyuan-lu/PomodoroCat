@@ -50,7 +50,7 @@ struct CatShopCell: View {
                         
                     }
                     .alert(isPresented: $showingSuccessAlert) {
-                        Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(catItem.name) for C\(catItem.price)"), dismissButton: .default(Text("Got it!")))
+                        Alert(title: Text("Purchase Succeed"), message: Text("You just purchased a \(catItem.name) for C\(catItem.price)"), dismissButton: .default(Text("Got it")))
                     }
                     
                     Spacer()
@@ -81,7 +81,7 @@ struct CatShopCell: View {
                         })
                         .disabled((catItem.purchased) ? true : false)
                         .alert(isPresented: $showingFailedAlert) {
-                            Alert(title: Text("Purchase Failed"), message: Text("You don't have enough Cat Coin"), dismissButton: .default(Text("Got it!")))
+                            Alert(title: Text("Purchase Failed"), message: Text("You don't have enough Cat Coin"), dismissButton: .default(Text("Got it")))
                         }
                     }
                 }
