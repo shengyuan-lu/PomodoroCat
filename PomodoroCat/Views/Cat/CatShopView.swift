@@ -16,11 +16,13 @@ struct CatShopView: View {
         
         
         ScrollView {
-            ForEach(catManager.catItemArray, id: \.self) { catItem in
-                CatShopCell(catItem: catItem, taskManager: taskManager, catManager: catManager)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
+            LazyVStack(alignment: .leading, spacing: 30) {
+                ForEach(catManager.catItemArray, id: \.self) { catItem in
+                    CatShopCell(catItem: catItem, taskManager: taskManager, catManager: catManager)
+                        .padding(.horizontal, 20)
+                }
             }
+            .padding(.top, 20)
             
         }
         .navigationBarItems(

@@ -67,7 +67,7 @@ struct ShopItemCell: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.yellow, lineWidth: 5)
         )
-        .frame(height: 150)
+        .frame(height: 160)
 
     }
     

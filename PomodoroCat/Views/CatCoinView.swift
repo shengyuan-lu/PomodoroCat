@@ -35,7 +35,7 @@ struct CatCoinView: View {
                         .foregroundColor(Color.yellow)
                         .lineLimit(1)
                         .minimumScaleFactor(0.1)
-                        
+                    
                 }
                 .padding(.leading, 12)
                 
@@ -50,8 +50,8 @@ struct CatCoinView: View {
                 
                 
                 // Boost Lable
-                
                 if selectionIndex == 0 {
+                    
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius - 4)
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
@@ -63,7 +63,10 @@ struct CatCoinView: View {
                     }
                     .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 110 : 100, height: 30)
                     .padding(.trailing, 10)
+                    
+                    
                 }
+                
             }
         }
         .frame(height: 50)

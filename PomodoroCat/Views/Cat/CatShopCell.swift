@@ -58,16 +58,17 @@ struct CatShopCell: View {
                     HStack() {
                         
                         Text("Happiness \n+ \(catItem.happinessNum)")
+                            .lineLimit(2)
                             .font(.body)
-                            .fontWeight(.regular)
                             .fixedSize(horizontal: false, vertical: true)
                             .lineLimit(nil)
+                            .minimumScaleFactor(0.1)
+                            
                         
                         Spacer()
                         
                         Button(action: {
                             checkAlertAndBuy()
-                            
                         }, label: {
                             Text((catItem.purchased) ? "Purchased" : "Buy C \(catItem.price)")
                                 .fontWeight(.bold)
@@ -79,6 +80,7 @@ struct CatShopCell: View {
                                 .foregroundColor(.white)
                             
                         })
+                        .layoutPriority(1)
                         .disabled((catItem.purchased) ? true : false)
                         .alert(isPresented: $showingFailedAlert) {
                             Alert(title: Text("Purchase Failed"), message: Text("You don't have enough Cat Coin"), dismissButton: .default(Text("Got it")))
@@ -99,7 +101,7 @@ struct CatShopCell: View {
     // MARK: - Function
     func checkAlertAndBuy() {
         if !catItem.purchased && taskManager.catCoin >= catItem.price{
-            showingSuccessAlert = true
+            showingSuccessAlert.toggle()
             
             catItem.purchased = true
             catManager.catItemArray[catItem.index].purchased = true
@@ -110,7 +112,7 @@ struct CatShopCell: View {
             
             audioPlayer.startPlayBack(audioUrl: AudioURL.buy!)
         } else {
-            showingFailedAlert = true
+            showingFailedAlert.toggle()
             audioPlayer.startPlayBack(audioUrl: AudioURL.buyFail!)
         }
     }
