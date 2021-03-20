@@ -1,4 +1,9 @@
 # PomodoroCat
+
+[![Demo Video](https://img.youtube.com/vi/exW3XTd7Rys/0.jpg)](https://www.youtube.com/watch?v=exW3XTd7Rys)
+
+Click the picture above to view our demo video on Youtube
+
 ## What is the Pomodoro Technique
 “The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato'.” -- Wikipedia
 
