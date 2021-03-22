@@ -1,5 +1,5 @@
 # PomodoroCat
-<img src="https://i.imgur.com/2r87O4V.png" width=500 />
+<img src="https://i.imgur.com/2r87O4V.png" width=750 />
 
 ## Demo Video
 [![Demo Video](https://img.youtube.com/vi/exW3XTd7Rys/0.jpg)](https://www.youtube.com/watch?v=exW3XTd7Rys)
@@ -7,6 +7,7 @@
 ## What is the Pomodoro Technique
 “The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato'.” -- Wikipedia
 
+<img src="https://i.imgur.com/HFV7yLY.png" width=750 />
 
 ## Inspiration
 Working remotely can be challenging, especially amidst a worldwide pandemic that knocks everyone off balance. Identifying a way to avoid an overwhelming schedule while coping with pressure from either work or school is crucial to our mental health as well as physical health. While the world’s entertainment industry booms in the past year, we realize that people are actively seeking ways to unwind meanwhile leveraging various relaxation outlets to cater to their intricate relationship with life. After analyzing the current applications that target productivity, we decide to integrate a fun game that allows users to keep their own cats while keeping track of their time using the famous Pomodoro technique. Pomodoro Technique is a time management mechanism developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down a large chunk of work into intervals, conventionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, inspired by the Italian word for “Tomato.”
