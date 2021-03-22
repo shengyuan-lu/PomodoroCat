@@ -1,5 +1,7 @@
 # PomodoroCat
 
+![Welcome](https://imgur.com/2r87O4V)
+
 [![Demo Video](https://img.youtube.com/vi/exW3XTd7Rys/0.jpg)](https://www.youtube.com/watch?v=exW3XTd7Rys)
 
 Click the picture above to view our demo video on Youtube
@@ -20,7 +22,7 @@ Based on the Pomodoro Technique, our application offers a customizable way for u
 - [x] tap on the shop buttton, purchase items, and speeding up the timer
 - [x] shop for the cat to add items to the habitat
 
-## Video Walkthrough
+## GIF Walkthrough
 <img src='https://i.imgur.com/bIaYyMT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## User Persona
