@@ -23,8 +23,6 @@ Working remotely can be challenging, especially amidst a worldwide pandemic that
 ## What it does
 Based on the Pomodoro Technique, our application offers a customizable way for users to set their own working sessions. Users can choose the duration of their short work sessions to optimize labor division of their intended tasks. Users are also given the option to customize the duration of their short and long breaks as well as the number of working cycles before commencing a long break. The number of cat coins is calculated based on the accumulated amount of time that the users spend on their work. In a separate view where users keep track of their cats, cat coins are used as currency to customize the background and decorations for the cat. Moreover, we support cat coin booster features that allow the users to earn extra cat coins within a limited time frame compared to normal users. By earning cat coins during work sessions in the application, users are given the option to purchase decorations for their cats, which serves as a positive reinforcement that helps release the pressure of completing arduous tasks. As users purchase decorations for their cats, the happiness index for the cat would increase. The highest threshold of the happiness index is at 100. 
 
-<img src="https://i.imgur.com/jvsD4lH.png" width=750 />
-
 ## Functions
 - [x] set timer with user-defined durations
 - [x] interchange between the timer and the cat's habitat
