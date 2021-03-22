@@ -2,6 +2,7 @@
 <img src="https://i.imgur.com/2r87O4V.png" width=750 />
 
 ## Demo Video
+Click the image below to watch a demo video
 [![Demo Video](https://img.youtube.com/vi/exW3XTd7Rys/0.jpg)](https://www.youtube.com/watch?v=exW3XTd7Rys)
 
 ## What is the Pomodoro Technique
@@ -48,7 +49,3 @@ We are proud of introducing our own graphics design as parts of our user interfa
 
 ## What we learned
 We learnt about the implementation of SwiftUI framework as well as backend support using parse servers. We also explored Firebase and learnt about the potential of how it would enable a smoother communication between our application and the users. 
-
-## What's next for PomodoroCat (planned for next week)
-For our next step, we plan to implement a more dynamic framework of data transfer between our application and the users using Firebase. Features such as live transactions can be implemented in the near future. Furthermore, we also plan to come up with more decorations customization options for the cats’ habitat. 
-
