@@ -1,6 +1,6 @@
 # PomodoroCat
 
-![Welcome](https://imgur.com/2r87O4V)
+![Welcome](https://i.imgur.com/2r87O4V.png)
 
 [![Demo Video](https://img.youtube.com/vi/exW3XTd7Rys/0.jpg)](https://www.youtube.com/watch?v=exW3XTd7Rys)
 
