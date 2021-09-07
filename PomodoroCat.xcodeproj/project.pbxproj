@@ -16,7 +16,6 @@
 		F44F5CF725EBB06C008FD5EA /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F5CF625EBB06C008FD5EA /* CatItem.swift */; };
 		F467CB1E25EA2D5200DD7B55 /* AudioURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */; };
 		F467CB2325EA35A000DD7B55 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */; };
-		F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */; };
 		F467CB2B25EA3C0A00DD7B55 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */; };
 		F467CB2E25EA3F3900DD7B55 /* CatCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB2D25EA3F3900DD7B55 /* CatCoinView.swift */; };
 		F467CB3425EABED600DD7B55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467CB3325EABED600DD7B55 /* SettingsView.swift */; };
@@ -61,7 +60,6 @@
 		F44F5CF625EBB06C008FD5EA /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		F467CB1D25EA2D5200DD7B55 /* AudioURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioURL.swift; sourceTree = "<group>"; };
 		F467CB2225EA35A000DD7B55 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
-		F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F467CB2A25EA3C0A00DD7B55 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F467CB2D25EA3F3900DD7B55 /* CatCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCoinView.swift; sourceTree = "<group>"; };
 		F467CB3325EABED600DD7B55 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		F4AF1DF425EB70C5002B0891 /* buy-success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "buy-success.wav"; sourceTree = "<group>"; };
 		F4AF1DF725EB7537002B0891 /* buy-fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "buy-fail.wav"; sourceTree = "<group>"; };
 		F4AF1E0125EB78FF002B0891 /* TimerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStats.swift; sourceTree = "<group>"; };
-		F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCat.entitlements; sourceTree = "<group>"; };
 		F4CA635025EADD64001FBA2C /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		F4CA635425EAE01D001FBA2C /* ShopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCell.swift; sourceTree = "<group>"; };
 		F4CA635925EAE37E001FBA2C /* PurchaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItem.swift; sourceTree = "<group>"; };
@@ -173,7 +170,6 @@
 		F4E1CC8025E9AB540026EB32 /* PomodoroCat */ = {
 			isa = PBXGroup;
 			children = (
-				F4CA634A25EAD29B001FBA2C /* PomodoroCat.entitlements */,
 				F4E1CC8125E9AB540026EB32 /* PomodoroCat.swift */,
 				F4E1CC9125E9AB640026EB32 /* Views */,
 				F4E1CC9425E9AB9A0026EB32 /* View Model */,
@@ -183,7 +179,6 @@
 				F43E830125EA1CD100885499 /* Sound */,
 				F4E1CC9C25E9ABEA0026EB32 /* Launch Screen */,
 				F4E1CC8525E9AB560026EB32 /* Assets.xcassets */,
-				F467CB2725EA3A7100DD7B55 /* GoogleService-Info.plist */,
 				F4E1CC8A25E9AB560026EB32 /* Info.plist */,
 				F4E1CC8725E9AB560026EB32 /* Preview Content */,
 			);
@@ -346,7 +341,6 @@
 				F43E830525EA1CF400885499 /* done.wav in Resources */,
 				F4AF1DF825EB7537002B0891 /* buy-fail.wav in Resources */,
 				F4E1CC8625E9AB560026EB32 /* Assets.xcassets in Resources */,
-				F467CB2825EA3A7100DD7B55 /* GoogleService-Info.plist in Resources */,
 				F44F5CF325EBAE4C008FD5EA /* cat-sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

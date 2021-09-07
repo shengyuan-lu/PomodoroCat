@@ -4,7 +4,6 @@ struct TimerMainView: View {
     
     // MARK: - Variable
     @ObservedObject var taskManager:TaskManager
-    
     @AppStorage("work") private var work = 25
     @AppStorage("shortRest") private var shortRest = 5
     @AppStorage("longRest") private var longRest = 15

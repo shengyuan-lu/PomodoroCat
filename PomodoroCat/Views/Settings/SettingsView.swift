@@ -23,39 +23,6 @@ struct SettingsView: View {
             // Form
             Form {
                 
-                // Timer Section
-//                Section(header: Text("Timer")) {
-//
-//                    NavigationLink(
-//                        destination: TimerPickerView(bindingNum: $work, selectionIndex: (work - 10), lowerBound: 10, upperBound: 60, unit: "Minutes"),
-//                        label: {
-//                            SettingsRowTypeAbout(iconName: "hammer.fill", iconColor: Color.tomato, firstText: "Work", secondText: "\(work) Minutes")
-//                                .padding(.vertical, 3)
-//                        }).id(UUID())
-//
-//                    NavigationLink(
-//                        destination: TimerPickerView(bindingNum: $shortRest, selectionIndex: (shortRest - 5), lowerBound: 5, upperBound: 30, unit: "Minutes"),
-//                        label: {
-//                            SettingsRowTypeAbout(iconName: "die.face.3.fill", iconColor: Color.tomato, firstText: "Short Break", secondText: "\(shortRest) Minutes")
-//                                .padding(.vertical, 3)
-//                        }).id(UUID())
-//
-//                    NavigationLink(
-//                        destination: TimerPickerView(bindingNum: $longRest, selectionIndex: (longRest - 15), lowerBound: 15, upperBound: 90, unit: "Minutes"),
-//                        label: {
-//                            SettingsRowTypeAbout(iconName: "bed.double.fill", iconColor: Color.tomato, firstText: "Long Break", secondText: "\(longRest) Minutes")
-//                                .padding(.vertical, 3)
-//                        }).id(UUID())
-//
-//                    NavigationLink(
-//                        destination: TimerPickerView(bindingNum: $numOfSection, selectionIndex: (numOfSection - 2), lowerBound: 2, upperBound: 10, unit: "Sections"),
-//                        label: {
-//                            SettingsRowTypeAbout(iconName: "rectangle.stack", iconColor: Color.tomato, firstText: "Sections", secondText:"\(numOfSection)")
-//                                .padding(.vertical, 3)
-//                        }).id(UUID())
-//
-//                }
-                
                 // Theme Section
                 Section(header: Text("Theme")) {
                     Picker(LocalizedStringKey("Theme"), selection: $themeIndex) {
