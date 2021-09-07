@@ -14,7 +14,6 @@ struct CatShopView: View {
     // MARK: - Body
     var body: some View {
         
-        
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 30) {
                 ForEach(catManager.catItemArray, id: \.self) { catItem in

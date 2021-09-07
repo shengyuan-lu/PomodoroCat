@@ -4,25 +4,15 @@ import SwiftUI
 class TaskManager: ObservableObject {
     
     @Published var isWorking = true
-    
     @Published var isOnLongRelax = false
-    
     @Published var timerStart = false
-    
     @Published var completedSection = 0
-    
-    @Published var multiplierInfo:[Any] = [false, 2]
-    
-    @Published var task:Task = Task()
-    
-    @Published var currentTo:CGFloat = 1
-    
-    @Published var currentMinute:Int = 1
-    
-    @Published var currentColor:Color = Color.blue
-    
-    @Published var currentText:String = "Tap to Start"
-    
+    @Published var multiplierInfo: [Any] = [false, 2]
+    @Published var task: Task = Task()
+    @Published var currentTo: CGFloat = 1
+    @Published var currentMinute: Int = 1
+    @Published var currentColor: Color = Color.blue
+    @Published var currentText: String = "Tap to Start"
     @Published var catCoin = 0
     
     var audioPlayer = AudioPlayer()
@@ -91,12 +81,11 @@ class TaskManager: ObservableObject {
                     currentColor = Color.orange
                     currentText = "Long Break"
                 }
-                
                 currentTo = 1
-                
             }
             
             // Long relaxing
+            
         } else if completedSection == task.taskStorage[3] && task.longRelaxSeconds != 0 {
             // Long relaxing initialization
             if task.longRelaxSeconds == task.taskStorage[2] {
@@ -115,7 +104,6 @@ class TaskManager: ObservableObject {
                 audioPlayer.startPlayBack(audioUrl: AudioURL.done!)
                 self.addCatCoin(amount: 10)
             }
-            
             
         } else if task.longRelaxSeconds == 0 {
             // The project has ended, reset
@@ -140,10 +128,9 @@ class TaskManager: ObservableObject {
         currentMinute = task.workSeconds
         currentColor = Color.blue
         currentText = "Tap to Start"
-        
     }
     
-    func addCatCoin(amount:Int) {
+    func addCatCoin(amount: Int) {
         if self.multiplierInfo[0] as! Bool == true {
             self.catCoin += (amount * (self.multiplierInfo[1] as! Int))
             

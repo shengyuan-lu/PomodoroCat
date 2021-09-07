@@ -13,9 +13,7 @@ struct TimerMainView: View {
     var body: some View {
         
         ScrollView {
-            
             VStack {
-                
                 HStack {
                     Text("Section Completed:")
                         .font(.body)
@@ -71,10 +69,7 @@ struct TimerMainView: View {
                         }).id(UUID())
                 }
                 .padding()
-                
             }
-
-            
             // ButtonSetView(taskManager: taskManager)
         }
         .onChange(of: work, perform: { value in
@@ -94,10 +89,7 @@ struct TimerMainView: View {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
             taskManager.resetTimer()
         })
-        
-        
     }
-    
 }
 
 // MARK: - Preview

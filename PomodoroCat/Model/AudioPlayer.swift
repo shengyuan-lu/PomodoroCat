@@ -16,7 +16,6 @@ class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var audioPlayer:AVAudioPlayer!
     
     func startPlayBack(audioUrl: URL) {
-        
         // Audio can be played even when device is in scilent mode
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback)
@@ -37,12 +36,9 @@ class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         if audioPlayer == nil {
             print("startPlayBack(): Audio player is nil")
         }
-        
-        
     }
     
     func stopPlayBack() {
-        
         if audioPlayer == nil {
             print("stopPlayBack(): Audio player is nil")
         }

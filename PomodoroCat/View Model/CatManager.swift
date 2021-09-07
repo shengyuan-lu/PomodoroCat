@@ -3,7 +3,7 @@ import SwiftUI
 
 class CatManager: ObservableObject {
     
-    @Published var happiness:Int = 0
+    @Published var happiness: Int = 0
     
     @Published var catItemArray = [
         CatItem(name: "Wood Clock", imageName: "clock", description: "A classic-looking clock that can tell time, and set alarm.", price: 500, happinessNum: 50, offset: [130, -190], index: 0, purchased: false),

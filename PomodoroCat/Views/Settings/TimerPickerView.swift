@@ -3,15 +3,12 @@ import SwiftUI
 struct TimerPickerView: View {
     
     // MARK: - Variable
-    @Binding var bindingNum:Int
+    @Binding var bindingNum: Int
+    @State var selectionIndex: Int
     
-    @State var selectionIndex:Int
-    
-    let lowerBound:Int
-    
-    let upperBound:Int
-    
-    let unit:String
+    let lowerBound: Int
+    let upperBound: Int
+    let unit: String
     
     @Environment(\.presentationMode) var presentationMode
     

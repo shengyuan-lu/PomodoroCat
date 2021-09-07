@@ -3,13 +3,13 @@ import SwiftUI
 struct ShopItemCell: View {
     
     // MARK: - Variable
-    let purchaseItem:PurchaseItem
+    let purchaseItem: PurchaseItem
     
     @State private var showingSuccessAlert = false
     
     @State private var showingFailedAlert = false
     
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     @State var audioPlayer = AudioPlayer()
     
@@ -82,7 +82,6 @@ struct ShopItemCell: View {
             taskManager.multiplierInfo = [true, purchaseItem.booster]
         }
     }
-    
 }
 
 // MARK: - Preview

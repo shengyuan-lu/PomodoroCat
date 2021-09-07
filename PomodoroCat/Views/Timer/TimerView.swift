@@ -5,7 +5,7 @@ struct TimerView: View {
     // MARK: - Variable
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     @AppStorage("work") private var work = 25
     @AppStorage("shortRest") private var shortRest = 5
@@ -19,7 +19,6 @@ struct TimerView: View {
         
         VStack {
             ZStack {
-                
                 VStack(spacing: 10) {
                     
                     if taskManager.timerStart {

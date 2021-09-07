@@ -3,13 +3,13 @@ import SwiftUI
 struct CatCoinView: View {
     
     // MARK: - Variable
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     @AppStorage("catCoin") private var catCoin = 0
     
-    @Binding var selectionIndex:Int
+    @Binding var selectionIndex: Int
     
-    let cornerRadius:CGFloat = 10
+    let cornerRadius: CGFloat = 10
     
     // MARK: - View
     var body: some View {
@@ -19,10 +19,8 @@ struct CatCoinView: View {
             RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(Color.yellow, lineWidth: 5)
             
             HStack {
-                
                 // Title
                 HStack {
-                    
                     Image("currency-dollar-circle")
                         .resizable()
                         .scaledToFit()
@@ -35,7 +33,6 @@ struct CatCoinView: View {
                         .foregroundColor(Color.yellow)
                         .lineLimit(1)
                         .minimumScaleFactor(0.1)
-                    
                 }
                 .padding(.leading, 12)
                 
@@ -51,22 +48,17 @@ struct CatCoinView: View {
                 
                 // Boost Lable
                 if selectionIndex == 0 {
-                    
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius - 4)
                             .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.yellow : Color.gray)
                         
                         Text((taskManager.multiplierInfo[0] as! Bool) ? "Boost \(taskManager.multiplierInfo[1] as! Int)X" : "No Boost" )
                             .fontWeight(.bold)
-                            .foregroundColor((taskManager.multiplierInfo[0] as! Bool)
-                                                ? Color.black : Color.white)
+                            .foregroundColor((taskManager.multiplierInfo[0] as! Bool) ? Color.black : Color.white)
                     }
                     .frame(width: (taskManager.multiplierInfo[0] as! Bool) ? 110 : 100, height: 30)
                     .padding(.trailing, 10)
-                    
-                    
                 }
-                
             }
         }
         .frame(height: 50)

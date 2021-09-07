@@ -3,7 +3,7 @@ import SwiftUI
 struct ShopView: View {
     
     // MARK: - Variable
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -11,7 +11,6 @@ struct ShopView: View {
     
     // MARK: - Body
     var body: some View {
-        
         
         ScrollView {
             ForEach(purchaseItemArray, id: \.self) { purchaseItem in
@@ -30,7 +29,6 @@ struct ShopView: View {
                         .font(.title)
                         .foregroundColor(.tomato)
                 }))
-        
     }
     
     // MARK: - Functions

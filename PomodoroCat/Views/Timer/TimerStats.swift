@@ -3,7 +3,7 @@ import SwiftUI
 struct TimerStats: View {
     
     // MARK: - Variable
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     // MARK: - View
     var body: some View {

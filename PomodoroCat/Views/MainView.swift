@@ -14,9 +14,9 @@ struct MainView: View {
     @AppStorage("numOfSection") private var numOfSection = 4
     @AppStorage("catCoin") private var catCoin = 0
     
-    @StateObject var taskManager:TaskManager = TaskManager()
+    @StateObject var taskManager: TaskManager = TaskManager()
     
-    @StateObject var catManager:CatManager = CatManager()
+    @StateObject var catManager: CatManager = CatManager()
     
     @State private var selectionIndex = 0
     
@@ -37,7 +37,7 @@ struct MainView: View {
                     
                     CatMainView(catManager: catManager)
                         .tag(1)
-
+                    
                 }
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -46,28 +46,23 @@ struct MainView: View {
                 .navigationBarItems(
                     leading:
                         Button(action: {
-                            
                             if selectionIndex == 0 {
                                 showIAPCartModal.toggle()
                             } else if selectionIndex == 1 {
                                 showCatCartModal.toggle()
                             }
-                            
                         }, label: {
                             Image(systemName: "cart.fill")
                                 .font(.title2)
                         })
                         .sheet(isPresented: self.$showIAPCartModal, content: {
-                            
                             NavigationView {
                                 ShopView(taskManager: taskManager)
                                     .preferredColorScheme(determineTheme(themeIndex))
                                     .navigationBarTitle(Text("Purchase Booster"))
                                     .navigationBarTitleDisplayMode(.inline)
                             }
-                            
-                        })
-   ,
+                        }),
                     trailing:
                         NavigationLink(
                             destination: SettingsView(taskManager: taskManager),
@@ -76,25 +71,17 @@ struct MainView: View {
                                     .font(.title2)
                             }))
                 .sheet(isPresented: self.$showCatCartModal, content: {
-                    
                     NavigationView {
-                    
                         CatShopView(catManager: catManager, taskManager: taskManager)
                             .preferredColorScheme(determineTheme(themeIndex))
                             .navigationBarTitle(Text("Cat Items"))
                             .navigationBarTitleDisplayMode(.inline)
-
                     }
-                    
                 })
                 .onChange(of: selectionIndex, perform: { value in
                     self.taskManager.resetTimer()
                 })
-  
-
             }
-            
-            
         }
         .onAppear(perform: {
             taskManager.task = Task(workSeconds: work, shortRelaxSeconds: shortRest, longRelaxSeconds: longRest, numOfSections: numOfSection)
@@ -105,10 +92,7 @@ struct MainView: View {
         .onChange(of: taskManager.catCoin, perform: { value in
             self.catCoin = taskManager.catCoin
         })
-        
-        
     }
-    
 }
 
 // MARK: - Preview

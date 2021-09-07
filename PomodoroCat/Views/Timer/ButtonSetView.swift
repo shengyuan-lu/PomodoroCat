@@ -3,7 +3,7 @@ import SwiftUI
 struct ButtonSetView: View {
     
     // MARK: - Variables
-    @ObservedObject var taskManager:TaskManager
+    @ObservedObject var taskManager: TaskManager
     
     // MARK: - View
     var body: some View {
@@ -24,10 +24,7 @@ struct ButtonSetView: View {
             .background(Color.pink)
             .clipShape(Circle())
         })
-        
-        
     }
-    
 }
 
 // MARK: - Preview

@@ -2,17 +2,13 @@ import Foundation
 
 struct PurchaseItem: Hashable {
     
-    let name:String
-    
-    let description:String
-    
-    let booster:Int
-    
-    let price:String
-    
+    let name: String
+    let description: String
+    let booster: Int
+    let price: String
     let id = UUID()
     
-    init(name:String, description: String, booster: Int, price: String) {
+    init(name: String, description: String, booster: Int, price: String) {
         self.name = name
         self.booster = booster
         self.price = price

@@ -1,18 +1,14 @@
 import Foundation
 
-struct Genius:Hashable {
+struct Genius: Hashable {
     
-    let name:String
-    
-    let imageName:String
-    
-    let role:String
-    
-    let bio:String
-    
+    let name: String
+    let imageName: String
+    let role: String
+    let bio: String
     let id = UUID()
     
-    init(name:String, imageName:String, role:String, bio:String) {
+    init(name: String, imageName: String, role: String, bio: String) {
         self.name = name
         self.imageName = imageName
         self.role = role
